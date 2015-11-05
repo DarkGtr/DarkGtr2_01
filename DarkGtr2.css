@@ -1,7 +1,11 @@
 #MainHeader {
     width: 100%;
-    height: 20px;
+    height: 7%;
+    position: fixed;
+    top: 0px;
+    padding: 0px 0px 2px 0px;
     background: black;
+
 }
 
 h2 {

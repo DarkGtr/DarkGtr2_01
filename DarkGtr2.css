@@ -16,11 +16,14 @@
     color: silver;*/
 }
 
+body{
+    background-color: #EBEBEB;
+}
+
 #Container {
     width: 960px;
     height: auto;
-    Margin: 0 auto;
-    background-color: #EBEBEB;
+    Margin: 0 auto;;
 }
 
 #LogoArea {

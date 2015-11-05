@@ -35,3 +35,17 @@
     height: 100px;
     float: right;
 }
+
+#Nav {
+    list-style: none;
+    }
+
+#Nav a{
+    color: white;
+    text-decoration: none;
+}
+
+#Nav li{
+    float: left;
+    margin-left: 30px;
+}

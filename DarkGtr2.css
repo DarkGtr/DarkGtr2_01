@@ -24,7 +24,6 @@ body{
     width: 960px;
     height: auto;
     Margin: 0 auto;
-    opacity: 0.5;
 }
 
 #LogoArea {
@@ -70,7 +69,7 @@ body{
     background-color: black;
     height: 40px;
     width: 100%;
-    color: white;
+    color: silver;
     padding-top: 20px;
 }
 
@@ -78,4 +77,5 @@ body{
     background-color: white;
     padding: 20px;
     height: 540px;
+    opacity: 0.5;
 }

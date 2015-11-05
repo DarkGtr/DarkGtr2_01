@@ -50,4 +50,8 @@
 #Nav li{
     float: left;
     margin-left: 30px;
+    background-color: #252525;
+    padding: 8px;
+    border: 1px solid silver;
+    border-collapse: 5px;
 }

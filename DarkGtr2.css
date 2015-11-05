@@ -1,0 +1,10 @@
+#MainHeader {
+    width: 100%;
+    height: 20px;
+    background: black;
+}
+
+h2 {
+    text-align: right;
+    float: left;
+}

@@ -23,7 +23,8 @@ body{
 .Container {
     width: 960px;
     height: auto;
-    Margin: 0 auto;;
+    Margin: 0 auto;
+    opacity: 0.5;
 }
 
 #LogoArea {

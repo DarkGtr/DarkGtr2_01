@@ -26,6 +26,7 @@
 #LogoArea {
     width: 300px;
     height: 100px;
+    Margin: 0px;
     background-image: url(http://madurai.es/wp-content/uploads/2015/05/300x100xlogo-300x100.png.pagespeed.ic.eJi8DutDCe.png);
     float: left;
 }

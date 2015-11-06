@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Homepage</title>
+    <title>Logout</title>
     <link rel="stylesheet" type="text/css" href="DarkGtr2.css">
 </head>
 <body>
@@ -14,7 +14,7 @@
         <div ID="NavArea">
             <ul ID="Nav">
                 <a href="HomePage.php"><li>Home</li></a>
-                <a href="Logout.php"><li>Logout</li></a>
+                <a href="Login.php"><li>Login</li></a>
             </ul>
         </div>
     </div>

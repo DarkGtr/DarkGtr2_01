@@ -24,10 +24,10 @@
         <div ID="LoginArea">
             <form ID="Login" action="Login.php" method="post">
                 <p>Username:</p>
-                    <input type="text" name="username"><br>
+                    <input type="text" name="username">
                 <p>Password:</p>
                     <input type="password" name="password">
-                    <input type="checkbox" name="remember me">
+                    <input type="checkbox" name="remember me"><br>
                    remember me <input type="submit" name="Login" value="Log in">
             </form>
         </div>

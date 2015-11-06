@@ -27,8 +27,8 @@
                     <input type="text" name="username"><br>
                 <p>Password:</p>
                     <input type="password" name="password">
-                    <input type="checkbox" name="remember me">Remember me<br>
-                    <input type="submit" name="Login" value="Log in">
+                    <input type="checkbox" name="remember me">
+                   remember me <input type="submit" name="Login" value="Log in">
             </form>
         </div>
     </div>

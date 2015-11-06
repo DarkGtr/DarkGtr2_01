@@ -107,3 +107,11 @@ body{
     border: 2px solid greenyellow;
 }
 
+#RegisterArea {
+    height: 300px;
+}
+
+#Register {
+    padding-left: 340px;
+    padding-top: 140px;
+}

@@ -21,9 +21,17 @@
 </div>
 <div ID="MainArea">
     <div class="Container page">
-        <?php
-
-        ?>
+        <div ID="RegisterArea">
+            <form ID="Register" action="Register.php" method="post">
+                <h3>Username:</h3>
+                <input type="text" name="username">
+                <h3>Email:</h3>
+                <input type="text" name="email">
+                <h3>Password:</h3>
+                <input type="password" name="password">
+                <input ID="LoginButton" type="submit" name="Register" value="Register">
+            </form>
+        </div>
     </div>
 </div>
 <div ID="footer">

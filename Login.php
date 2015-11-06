@@ -28,7 +28,7 @@
                 <h3>Password:</h3>
                     <input type="password" name="password">
                     <input type="checkbox" name="remember me">remember me<br>
-                   <br><input type="submit" name="Login" value="Log in">
+                    <input ID="LoginButton" type="submit" name="Login" value="Log in">
             </form>
         </div>
     </div>

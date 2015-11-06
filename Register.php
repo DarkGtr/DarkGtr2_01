@@ -8,7 +8,9 @@
 <body>
 <div ID = "MainHeader">
     <div class="Container">
-        <div ID="LogoArea"></div>
+        <div ID="LogoArea">
+            <a href="index.html" ID="LogoLink">Logo</a>
+        </div>
         <div ID="NavArea">
             <ul ID="Nav">
                 <a href="Login.php"><li>Login</li></a>

@@ -107,6 +107,3 @@ body{
     border: 2px solid greenyellow;
 }
 
-#LoginButton input:hover {
-    background-color: greenyellow;
-}

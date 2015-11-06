@@ -79,3 +79,9 @@ body{
     height: 540px;
     opacity: 0.5;
 }
+
+#LogoLink {
+    background-image: url(http://s21.postimg.org/jpff5f0fb/Logo.jpg);
+    display: block;
+    text-indent: -9999px;
+}

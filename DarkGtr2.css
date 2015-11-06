@@ -84,4 +84,7 @@ body{
     background-image: url(http://s21.postimg.org/jpff5f0fb/Logo.jpg);
     display: block;
     text-indent: -9999px;
+    margin: 0 auto;
+    width: 300px;
+    height: 100px;
 }

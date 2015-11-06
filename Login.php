@@ -23,12 +23,12 @@
     <div class="Container page">
         <div ID="LoginArea">
             <form ID="Login" action="Login.php" method="post">
-                <p>Username:</p>
+                <h3>Username:</h3>
                     <input type="text" name="username">
-                <p>Password:</p>
+                <h3>Password:</h3>
                     <input type="password" name="password">
-                    <input type="checkbox" name="remember me"><br>
-                   remember me <input type="submit" name="Login" value="Log in">
+                    <input type="checkbox" name="remember me">remember me<br>
+                   <input type="submit" name="Login" value="Log in">
             </form>
         </div>
     </div>

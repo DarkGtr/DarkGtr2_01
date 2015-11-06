@@ -90,9 +90,12 @@ body{
 }
 
 #Login {
-    display: block;
+
 }
 
 #LoginArea {
+    width: 70%;
+    height: 300px;
+    border: 5px solid #117700;
     position: absolute;
 }

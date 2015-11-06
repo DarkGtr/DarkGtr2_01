@@ -21,9 +21,13 @@
 </div>
 <div ID="MainArea">
     <div class="Container page">
-        <?php
-
-        ?>
+        <form ID="Login" action="Login.php" method="post">
+            <p>Username</p>
+            <p>Password</p>
+                <input type="password" name="password">
+                <input type="checkbox" name="remember me"> Remember me
+                <input type="submit" name="Login" value="login">
+        </form>
     </div>
 </div>
 <div ID="footer">

@@ -28,7 +28,7 @@
                 <h3>Email:</h3>
                 <input type="text" name="email">
                 <h3>Password:</h3>
-                <input type="password" name="password">
+                <input type="password" name="password"><br>
                 <input ID="LoginButton" type="submit" name="Register" value="Register">
             </form>
         </div>

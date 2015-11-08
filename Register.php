@@ -14,7 +14,7 @@
             die('Error inserting new record');
         }
 
-        $newrecord = "1 record added to the database";
+        $newrecord = "You're successfully registered babe";
     }
 
 ?>

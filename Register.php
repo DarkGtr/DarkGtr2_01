@@ -1,7 +1,7 @@
 <?php
     require('config.php');
 
-    if (isset($_POST['submit'])) {
+    if (isset($_POST['Register'])) {
         include('$db');
 
         $username = $_POST['username'];

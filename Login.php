@@ -40,7 +40,7 @@
 <div ID="MainArea">
     <div class="Container page">
         <div ID="LoginArea">
-            <form ID="Login" action="HomePage.php" method="GET">
+            <form ID="Login" action="Login.php" method="GET">
                 <h3>Username:</h3>
                     <input type="text" name="username">
                 <h3>Password:</h3>

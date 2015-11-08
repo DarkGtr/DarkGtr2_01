@@ -3,7 +3,7 @@
 
     if (isset($_POST['login'])){
         include('$db');
-    }
+
 
     $username = $_POST['username'];
     $password = $_POST['password'];
@@ -15,6 +15,7 @@
     } else {
         echo "wrong combo";
     }
+}
 ?>
 
 <!DOCTYPE html>

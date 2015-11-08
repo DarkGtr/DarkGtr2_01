@@ -1,18 +1,19 @@
 <?php
     require('config.php');
 
-    if (isset($_GET['login'])){
+    if (isset($_POST['login'])){
         include('$db');
     }
 
-    $username = $_GET['username'];
-    $password = $_GET['password'];
+    $username = $_POST['username'];
+    $password = $_POST['password'];
     $sqlget = "SELECT Username, Password FROM users WHERE Username= '$username'
     AND password = '$password'";
 
-    if (!mysqli_query($db, $sqlget)) {
-        die('Error');
-
+    if ($sqlget > 0) {
+        echo "you are now logged in.";
+    } else {
+        echo "wrong combo";
     }
 ?>
 
@@ -40,7 +41,7 @@
 <div ID="MainArea">
     <div class="Container page">
         <div ID="LoginArea">
-            <form ID="Login" action="Login.php" method="GET">
+            <form ID="Login" action="Login.php" method="POST">
                 <h3>Username:</h3>
                     <input type="text" name="username">
                 <h3>Password:</h3>

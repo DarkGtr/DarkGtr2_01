@@ -1,3 +1,21 @@
+<?php
+    require('config.php');
+
+    if (isset($_GET['login'])){
+        include('$db');
+    }
+
+    $username = $_GET['username'];
+    $password = $_GET['password'];
+    $sqlget = "SELECT Username, Password FROM users WHERE Username= '$username'
+    AND password = '$password'";
+
+    if (!mysqli_query($db, $sqlget)) {
+        die('Error');
+
+    }
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -22,7 +40,7 @@
 <div ID="MainArea">
     <div class="Container page">
         <div ID="LoginArea">
-            <form ID="Login" action="Login.php" method="post">
+            <form ID="Login" action="HomePage.php" method="GET">
                 <h3>Username:</h3>
                     <input type="text" name="username">
                 <h3>Password:</h3>

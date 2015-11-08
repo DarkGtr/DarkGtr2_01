@@ -8,7 +8,7 @@
     $username = $_POST['username'];
     $password = $_POST['password'];
     $sqlget = "SELECT Username, Password FROM users WHERE Username= '$username'
-    AND password = '$password'";
+    AND Password = '$password'";
 
     if ($sqlget > 0) {
         echo "you are now logged in.";

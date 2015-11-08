@@ -8,7 +8,7 @@
         $email = $_POST['email'];
         $password = $_POST['password'];
         $sqlinsert = "INSERT INTO users (Username, Email, Password) VALUES
-        ('$username', '$email', 'md5($password)')";
+        ('$username', '$email', '$password')";
 
         if (!mysqli_query($db, $sqlinsert)) {
             die('Error inserting new record');

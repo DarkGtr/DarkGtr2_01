@@ -1,3 +1,24 @@
+<?php
+    require('config.php');
+
+    if (isset($_POST['submit'])) {
+        include('$db');
+
+        $username = $_POST['username'];
+        $email = $_POST['email'];
+        $password = $_POST['password'];
+        $sqlinsert = "INSERT INTO Users (username, email, password) VALUES
+        ('$username', '$email', '$password')";
+
+        if (!mysqli_query($db, $sqlinsert)) {
+            die('Error inserting new record');
+        }
+
+        $newrecord = "1 record added to the database";
+    }
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -22,7 +43,7 @@
 <div ID="MainArea">
     <div class="Container page">
         <div ID="RegisterArea">
-            <form ID="Register" action="Register.php" method="post">
+            <form ID="Register" action="Register.php" method="POST">
                 <h3>Username:</h3>
                 <input type="text" name="username">
                 <h3>Email:</h3>
@@ -31,6 +52,9 @@
                 <input type="password" name="password"><br>
                 <input ID="LoginButton" type="submit" name="Register" value="Register">
             </form>
+            <?php
+                echo $newrecord;
+            ?>
         </div>
     </div>
 </div>

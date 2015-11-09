@@ -38,7 +38,7 @@
 
                             $username = mysql_escape_string($_POST['username']);
                             $password = mysql_escape_string($_POST['password']);
-                            $password = md5($password);
+                            //$password = md5($password);
                             $sqlget = mysql_query ("SELECT * FROM users WHERE Username= '$username'
                                 AND Password = '$password'");
                             if (mysql_num_rows($sqlget) > 0) {

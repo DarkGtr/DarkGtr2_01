@@ -39,7 +39,8 @@
                             $password = mysqli_escape_string($_POST['password']);
                             //$password = md5($password);
                             $sqlget = mysqli_query ("SELECT Username, Email FROM users");
-                            if (mysqli_num_rows($sqlget) > 0) {
+                            echo $sqlget;
+                            if (mysqli_num_rows($sqlget) > -1) {
                                 echo "you are now logged in.";
                             } else {
                                 echo "wrong combo";;

@@ -3,7 +3,7 @@
 
     if (isset($_POST['login'])){
         include('$db');
-
+    echo "Starting Login Check";
 
     $username = mysql_escape_string($_POST['username']);
     $password = mysql_escape_string($_POST['password']);

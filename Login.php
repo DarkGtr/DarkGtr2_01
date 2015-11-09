@@ -1,7 +1,7 @@
 <?php
     require('config.php');
 
-    if (isset($_POST['login'])){
+    if (isset($_POST['Login'])){
         include('$db');
     echo "Starting Login Check";
 

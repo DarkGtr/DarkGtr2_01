@@ -1,3 +1,21 @@
+<?php
+require('config.php');
+
+if (isset($_POST['Login'])){
+    include('$db');
+
+    $username = mysql_escape_string($_POST['username']);
+    $password = mysql_escape_string($_POST['password']);
+    $password = md5($password);
+    $sqlget = mysql_query ("SELECT * FROM users WHERE Username= '$username'
+                        AND Password = '$password'");
+    if (mysql_num_rows($sqlget) > 0) {
+        echo "you are now logged in.";
+    } else {
+        echo "wrong combo";
+    }
+}
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -31,24 +49,6 @@
                     <input type="checkbox" name="remember me">remember me<br>
                     <input ID="LoginButton" type="submit" name="Login" value="Log in">
             </form>
-            <?php
-            require('config.php');
-
-            if (isset($_POST['Login'])){
-                include('$db');
-
-                $username = mysql_escape_string($_POST['username']);
-                $password = mysql_escape_string($_POST['password']);
-                $password = md5($password);
-                $sqlget = mysql_query ("SELECT * FROM users WHERE Username= '$username'
-                        AND Password = '$password'");
-                if (mysql_num_rows($sqlget) > 0) {
-                    echo "you are now logged in.";
-                } else {
-                    echo "wrong combo";
-                }
-            }
-            ?>
         </div>
     </div>
 </div>

@@ -42,7 +42,9 @@
                             AND Password ='$password'";
                             $result = $db->query($sqlget);
                             if ($result->num_rows >0) {
-                                echo "you are now logged in.";
+                                while($row = $result->fetch_assoc()) {
+                                    echo "You are logged in";
+                                }
                             } else {
                                 echo "wrong combo";
                             }

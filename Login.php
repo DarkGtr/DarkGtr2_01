@@ -43,7 +43,7 @@
                             if (mysqli_num_rows($sqlget) > -1) {
                                 echo "you are now logged in.";
                             } else {
-                                echo "wrong combo";;
+                                echo "wrong combo";
                             }
                         }
                     ?>

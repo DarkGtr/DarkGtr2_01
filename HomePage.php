@@ -33,9 +33,7 @@
     <div class="Container page">
         <p>Hello,
             <?php
-            if(isset($_SESSION['username'])) {
                 echo $_SESSION['username'];
-            }
             ?>
         </p>
     </div>

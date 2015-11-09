@@ -1,6 +1,6 @@
 <?php
     session_start();
-    header('location: Login.php');
+    header('location: index.html');
     session_destroy();
 ?>
 <!DOCTYPE html>
@@ -26,7 +26,6 @@
 </div>
 <div ID="MainArea">
     <div class="Container page">
-        If user and password is correct this page will display his/her username and access_level
     </div>
 </div>
 <div ID="footer">

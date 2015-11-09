@@ -3,7 +3,7 @@
     header('location: index.html');
     session_destroy();
     if(session_destroy()){
-        echo "<script> 'You are signed out'</script>"
+        echo "<script>alert('You are logged out')</script>";
     }
 ?>
 <!DOCTYPE html>
@@ -21,7 +21,7 @@
         </div>
         <div ID="NavArea">
             <ul ID="Nav">
-                <a href="HomePage.php"><li>Home</li></a>
+                <a href="index.html"><li>Home</li></a>
                 <a href="Login.php"><li>Login</li></a>
             </ul>
         </div>

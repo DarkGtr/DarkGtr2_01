@@ -1,12 +1,3 @@
-<?php
-    session_start();
-    if(!isset($_SESSION['username'])){
-
-    }else{
-        die();
-    }
-
-?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -33,7 +24,13 @@
     <div class="Container page">
         <p>Hello,
             <?php
+                session_start();
                 echo $_SESSION['username'];
+            ?>
+        </p>
+        <p>
+            <?php
+
             ?>
         </p>
     </div>

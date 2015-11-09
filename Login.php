@@ -35,13 +35,12 @@
 
                         if (isset($_POST['Login'])){
                             include('$db');
-                            echo "Im getting here";
-                            $username = mysql_escape_string($_POST['username']);
-                            $password = mysql_escape_string($_POST['password']);
+                            $username = mysqli_escape_string($_POST['username']);
+                            $password = mysqli_escape_string($_POST['password']);
                             //$password = md5($password);
-                            $sqlget = mysql_query ("SELECT * FROM users WHERE Username= '$username'
+                            $sqlget = mysqli_query ("SELECT * FROM users WHERE Username= '$username'
                                 AND Password = '$password'");
-                            if (mysql_num_rows($sqlget) > 0) {
+                            if (mysqli_num_rows($sqlget) > 0) {
                                 echo "you are now logged in.";
                             } else {
                                 echo "wrong combo";

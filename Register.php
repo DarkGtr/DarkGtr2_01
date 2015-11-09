@@ -7,7 +7,7 @@
         $username = $_POST['username'];
         $email = $_POST['email'];
         $password = $_POST['password'];
-        //$password = md5($password);
+        $password = md5($password);
         $sqlinsert = "INSERT INTO users (Username, Email, Password) VALUES
         ('$username', '$email', '$password')";
 

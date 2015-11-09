@@ -38,7 +38,7 @@
 
                             $username = mysqli_real_escape_string($db, $_POST['username']);
                             $password = mysqli_real_escape_string($db, $_POST['password']);
-                            //$password = md5($password);
+                            $password = md5($password);
                             $sqlget = "SELECT * FROM users WHERE Username ='$username'
                             AND Password ='$password'";
                             $run_user = mysqli_query($db, $sqlget);
@@ -49,14 +49,14 @@
                             } else {
                                 echo "<script>alert('Username or Password is not correct, try again')</script>";
                             }
-                            //$result = $db->query($sqlget);
+                            /*//$result = $db->query($sqlget);
                            // if ($result->//num_rows >0) {
                                // while($row = $result->fetch_assoc()) {
                                    // echo "You are logged in";
                                // }
                            // } else {
                               //  echo "wrong combo";
-                            //}
+                            }*/
                         }
                     ?>
             </form>

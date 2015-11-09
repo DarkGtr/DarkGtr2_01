@@ -39,6 +39,7 @@
                             $password = mysqli_escape_string($_POST['password']);
                             //$password = md5($password);
                             $sqlget = mysqli_query ("SELECT Username, Email FROM users");
+                            echo "hello";
                             echo $sqlget;
                             if (mysqli_num_rows($sqlget) > -1) {
                                 echo "you are now logged in.";

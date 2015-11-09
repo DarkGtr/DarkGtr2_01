@@ -38,7 +38,8 @@
                             $username = mysqli_escape_string($_POST['username']);
                             $password = mysqli_escape_string($_POST['password']);
                             //$password = md5($password);
-                            $sqlget = "SELECT Username, Email FROM users";
+                            $sqlget = "SELECT * FROM users WHERE Username ='$username'
+                            AND Password ='$password'";
                             $result = $db->query($sqlget);
                             if ($result->num_rows >0) {
                                 echo "you are now logged in.";

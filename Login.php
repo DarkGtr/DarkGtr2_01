@@ -1,21 +1,3 @@
-<?php
-require('config.php');
-
-if (isset($_POST['Login'])){
-    include('$db');
-
-    $username = mysql_escape_string($_POST['username']);
-    $password = mysql_escape_string($_POST['password']);
-    $password = md5($password);
-    $sqlget = mysql_query ("SELECT * FROM users WHERE Username= '$username'
-                        AND Password = '$password'");
-    if (mysql_num_rows($sqlget) > 0) {
-        echo "you are now logged in.";
-    } else {
-        echo "wrong combo";
-    }
-}
-?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -41,7 +23,7 @@ if (isset($_POST['Login'])){
 <div ID="MainArea">
     <div class="Container page">
         <div ID="LoginArea">
-            <form ID="Login" action="HomePage.php" method="POST">
+            <form ID="Login" action="Login.php" method="POST">
                 <h3>Username:</h3>
                     <input type="text" name="username">
                 <h3>Password:</h3>
@@ -49,6 +31,24 @@ if (isset($_POST['Login'])){
                     <input type="checkbox" name="remember me">remember me<br>
                     <input ID="LoginButton" type="submit" name="Login" value="Log in">
             </form>
+            <?php
+            require('config.php');
+
+            if (isset($_POST['Login'])){
+                include('$db');
+
+                $username = mysql_escape_string($_POST['username']);
+                $password = mysql_escape_string($_POST['password']);
+                $password = md5($password);
+                $sqlget = mysql_query ("SELECT * FROM users WHERE Username= '$username'
+                        AND Password = '$password'");
+                if (mysql_num_rows($sqlget) > 0) {
+                    echo "you are now logged in.";
+                } else {
+                    echo "wrong combo";
+                }
+            }
+            ?>
         </div>
     </div>
 </div>

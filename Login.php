@@ -3,7 +3,6 @@
 
     if (isset($_POST['Login'])){
         include('$db');
-    echo "Starting Login Check";
 
     $username = mysql_escape_string($_POST['username']);
     $password = mysql_escape_string($_POST['password']);
@@ -43,7 +42,7 @@
 <div ID="MainArea">
     <div class="Container page">
         <div ID="LoginArea">
-            <form ID="Login" action="Login.php" method="POST">
+            <form ID="Login" action="HomePage.php" method="POST">
                 <h3>Username:</h3>
                     <input type="text" name="username">
                 <h3>Password:</h3>

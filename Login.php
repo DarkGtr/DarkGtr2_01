@@ -35,7 +35,7 @@
 
                         if (isset($_POST['Login'])){
                             include('$db');
-
+                            echo "Im getting here";
                             $username = mysql_escape_string($_POST['username']);
                             $password = mysql_escape_string($_POST['password']);
                             //$password = md5($password);

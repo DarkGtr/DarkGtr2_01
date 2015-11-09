@@ -20,13 +20,6 @@
     <div class="Container">
         <div ID="LogoArea">
             <a href="index.html" ID="LogoLink">Logo</a>
-            <p>Hello,
-                <?php
-                    if(isset($_SESSION['username'])) {
-                        echo $_SESSION['username'];
-                    }
-                ?>
-            </p>
         </div>
         <div ID="NavArea">
             <ul ID="Nav">
@@ -38,7 +31,13 @@
 </div>
 <div ID="MainArea">
     <div class="Container page">
-        If user and password is correct this page will display his/her username and access_level
+        <p>Hello,
+            <?php
+            if(isset($_SESSION['username'])) {
+                echo $_SESSION['username'];
+            }
+            ?>
+        </p>
     </div>
 </div>
 <div ID="footer">

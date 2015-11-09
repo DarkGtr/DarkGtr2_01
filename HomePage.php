@@ -1,3 +1,13 @@
+<?php
+    session_start();
+    if(!isset($_SESSION['username'])){
+
+    }else{
+        die();
+    }
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,6 +20,13 @@
     <div class="Container">
         <div ID="LogoArea">
             <a href="index.html" ID="LogoLink">Logo</a>
+            <p>Hello,
+                <?php
+                    if(isset($_SESSION['username'])) {
+                        echo $_SESSION['username'];
+                    }
+                ?>
+            </p>
         </div>
         <div ID="NavArea">
             <ul ID="Nav">

@@ -13,7 +13,7 @@
         </div>
         <div ID="NavArea">
             <ul ID="Nav">
-                <a href="HomePage.php"><li>Home</li></a>
+                <a href="index.html"><li>Home</li></a>
                 <a href="Logout.php"><li>Logout</li></a>
             </ul>
         </div>

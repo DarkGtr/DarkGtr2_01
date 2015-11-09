@@ -35,19 +35,28 @@
 
                         if (isset($_POST['Login'])){
                             include('$db');
+
                             $username = mysqli_escape_string($_POST['username']);
                             $password = mysqli_escape_string($_POST['password']);
                             //$password = md5($password);
                             $sqlget = "SELECT * FROM users WHERE Username ='$username'
                             AND Password ='$password'";
-                            $result = $db->query($sqlget);
-                            if ($result->num_rows >0) {
-                                while($row = $result->fetch_assoc()) {
-                                    echo "You are logged in";
-                                }
+                            $run_user = mysqli_query($db, $sqlget);
+                            $check_user= mysqli_num_rows($run_user);
+                            if($check_user>0){
+                                $_SESSION['username']=$username;
+                                echo "<script>window.open('HomePage.php','_self')</script>";
                             } else {
-                                echo "wrong combo";
+                                echo "<script>alert('Username or Password is not correct, try again')</script>";
                             }
+                            //$result = $db->query($sqlget);
+                           // if ($result->//num_rows >0) {
+                               // while($row = $result->fetch_assoc()) {
+                                   // echo "You are logged in";
+                               // }
+                           // } else {
+                              //  echo "wrong combo";
+                            //}
                         }
                     ?>
             </form>

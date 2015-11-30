@@ -25,7 +25,7 @@
         <p>Hello,
             <?php
                 session_start();
-                echo $_SESSION['username']=$username;
+                echo $_SESSION['username'];
             ?>
         </p>
         <p>

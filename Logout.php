@@ -2,9 +2,7 @@
     session_start();
     header('location: index.html');
     session_destroy();
-    if(session_destroy()){
-        echo "<script>alert('You are logged out')</script>";
-    }
+
 ?>
 <!DOCTYPE html>
 <html lang="en">

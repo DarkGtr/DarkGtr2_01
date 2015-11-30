@@ -11,10 +11,12 @@
                         document.getElementById("twitter").innerHTML = xhttp.responseText;
                     }
                 };
-                xhttp.open("GET", "http://darknodeapp.azurewebsites.net", true);
+                xhttp.open("GET", "http://YOUR-NODE-SERVER-URL/", true);
                 xhttp.send();
             }
+
         </script>
+
     </head>
     <body>
         <header>

@@ -47,7 +47,7 @@
         }
 
             session_start();
-                echo 'Welcome ' . $_SESSION['username'];
+                echo 'Welcome ' . $username;
         ?>
         <p>
             <?php

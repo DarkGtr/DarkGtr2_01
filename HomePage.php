@@ -24,6 +24,7 @@
 </div>
 <div ID="MainArea">
     <div class="Container page">
+        <h1>
         <?php
         require('config.php');
 
@@ -39,7 +40,7 @@
             $check_user= mysqli_num_rows($run_user);
             if($check_user==1){
                 $_SESSION['username']=$username;
-                echo 'Welcome' . $_SESSION['username'];
+                echo 'Welcome ' . $_SESSION['username'];
             } else {
                 echo "Username or Password is not correct, try again";
                 header('location:Login.php');
@@ -49,6 +50,7 @@
            // session_start();
             //    echo 'Welcome ' . $username;
         ?>
+        </h1>
         <p>
             <?php
 

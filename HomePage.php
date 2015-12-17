@@ -23,8 +23,12 @@
 <div ID="MainArea">
     <div class="Container page">
         <?php
-            require('login.php');
+
             session_start();
+                if($_SESSION['username']) {
+                    header("location:index.html");
+                    exit;
+                }
                 echo 'Welcome ' . $_SESSION['username'];
         ?>
         <p>

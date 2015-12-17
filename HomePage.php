@@ -22,13 +22,10 @@
 </div>
 <div ID="MainArea">
     <div class="Container page">
-        <p>Hello,
-            <?php
-            require('config.php');
-                session_start();
-                echo $_SESSION['username'];
-            ?>
-        </p>
+        <?php
+            session_start();
+                echo 'Welcome ' . $_SESSION['username'];
+        ?>
         <p>
             <?php
 

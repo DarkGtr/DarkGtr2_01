@@ -43,7 +43,7 @@
                             AND Password ='$password'";
                             $run_user = mysqli_query($db, $sqlget);
                             $check_user= mysqli_num_rows($run_user);
-                            if($check_user>0){
+                            if($check_user==1){
                                 $_SESSION['username']=$username;
                                 echo "<script>window.open('HomePage.php','_self')</script>";
                             } else {

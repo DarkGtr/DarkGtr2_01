@@ -23,6 +23,7 @@
 <div ID="MainArea">
     <div class="Container page">
         <?php
+            require('login.php');
             session_start();
                 echo 'Welcome ' . $_SESSION['username'];
         ?>

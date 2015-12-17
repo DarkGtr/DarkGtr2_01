@@ -16,6 +16,7 @@ if (isset($_POST['Login'])){
         echo "<script>window.open('HomePage.php','_self')</script>";
     } else {
         echo "<script>alert('Username or Password is not correct, try again')</script>";
+        header('index.html');
     }
 }
 ?>

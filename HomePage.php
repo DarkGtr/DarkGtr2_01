@@ -41,8 +41,9 @@
                 $_SESSION['username']=$username;
                 echo "<script>window.open('HomePage.php','_self')</script>";
             } else {
+                header('location:index.html');
                 echo "<script>alert('Username or Password is not correct, try again')</script>";
-                header('index.html');
+
             }
         }
 

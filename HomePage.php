@@ -39,15 +39,15 @@
             $check_user= mysqli_num_rows($run_user);
             if($check_user==1){
                 $_SESSION['username']=$username;
-                echo "<script>window.open('HomePage.php','_self')</script>";
+                echo 'Welcome' . $_SESSION['username'];
             } else {
                 echo "Username or Password is not correct, try again";
                 header('location:Login.php');
             }
         }
 
-            session_start();
-                echo 'Welcome ' . $username;
+           // session_start();
+            //    echo 'Welcome ' . $username;
         ?>
         <p>
             <?php

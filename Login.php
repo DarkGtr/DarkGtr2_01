@@ -49,14 +49,6 @@
                             } else {
                                 echo "<script>alert('Username or Password is not correct, try again')</script>";
                             }
-                            /*//$result = $db->query($sqlget);
-                           // if ($result->//num_rows >0) {
-                               // while($row = $result->fetch_assoc()) {
-                                   // echo "You are logged in";
-                               // }
-                           // } else {
-                              //  echo "wrong combo";
-                            }*/
                         }
                     ?>
             </form>

@@ -24,8 +24,9 @@
     <div class="Container page">
         <p>Hello,
             <?php
+            require('config.php');
                 session_start();
-                echo $_SESSION['&username'];
+                echo $_SESSION['username'];
             ?>
         </p>
         <p>

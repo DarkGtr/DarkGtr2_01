@@ -1,8 +1,8 @@
 <?php
+require('config.php');
     session_start();
     header('location: index.html');
     session_destroy();
-
 ?>
 <!DOCTYPE html>
 <html lang="en">

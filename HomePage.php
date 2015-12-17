@@ -25,11 +25,11 @@
         <?php
 
             session_start();
-                if($_SESSION['username']) {
+                if($_SESSION['Login']) {
                     header("location:index.html");
                     exit;
                 }
-                echo 'Welcome ' . $_SESSION['username'];
+                echo 'Welcome ' . $_SESSION['Login'];
         ?>
         <p>
             <?php

@@ -42,8 +42,8 @@
                 $_SESSION['username']=$username;
                 echo 'Welcome ' . $_SESSION['username'];
             } else {
-                echo "Username or Password is not correct, try again";
-                header('location:Login.php');
+                echo "Please Log In First";
+                echo "<script>setTimeout(\"location=Login.php);</script>";
             }
         }
 

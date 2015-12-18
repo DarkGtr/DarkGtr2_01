@@ -43,7 +43,7 @@
                 echo 'Welcome ' . $_SESSION['username'];
             } else {
                 //header('Refresh:5; url=Login.php');
-                echo "<script>alert('received!'); location.href='Login.php';</script>";
+                echo "<script>alert('Please Login'); location.href='Login.php';</script>";
             }
         }
         ?>

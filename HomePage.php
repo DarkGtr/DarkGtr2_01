@@ -43,7 +43,8 @@
                 echo 'Welcome ' . $_SESSION['username'];
             } else {
                 echo "Please Log In First";
-                echo "<script>setTimeout(\"location=Login.php);</script>";
+                echo "<script>setTimeout(\"location.href = 'http://darkgtr2.azurewebsites.net/Login.php';\",1500);</script>";
+
             }
         }
 

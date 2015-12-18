@@ -42,16 +42,10 @@
                 $_SESSION['username']=$username;
                 echo 'Welcome ' . $_SESSION['username'];
             } else {
-                echo "<script>";
-                echo " alert('Please Login.');
-        window.location.href='".site_url('http://darkgtr2.azurewebsites.net/Login.php')."';
-</script>";
-
+                header('Refresh:5; url=Login.php');
+                echo 'Please Log In First';
             }
         }
-
-           // session_start();
-            //    echo 'Welcome ' . $username;
         ?>
         </h1>
         <p>

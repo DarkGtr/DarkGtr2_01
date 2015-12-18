@@ -42,8 +42,8 @@
                 $_SESSION['username']=$username;
                 echo 'Welcome ' . $_SESSION['username'];
             } else {
-                header('Refresh:5; url=Login.php');
-                echo 'Please Log In First';
+                //header('Refresh:5; url=Login.php');
+                echo "<script>alert('received!'); location.href='Login.php';</script>";
             }
         }
         ?>

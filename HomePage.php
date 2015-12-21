@@ -38,7 +38,7 @@
             $check_user= mysqli_num_rows($run_user);
             if($check_user==1){
                 $_SESSION['username']=$username;
-                echo 'Welcome ' . $_SESSION['username'];
+                echo 'Welcome ' . $_SESSION['username'] . "<br>";
             } else {
                 //header('Refresh:5; url=Login.php');
                 echo "<script>alert('Please Login'); location.href='Login.php';</script>";
@@ -51,11 +51,6 @@
 
         ?>
         </h1>
-        <p>
-            <?php
-
-            ?>
-        </p>
     </div>
 </div>
 <div ID="footer">

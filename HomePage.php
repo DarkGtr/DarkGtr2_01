@@ -43,13 +43,12 @@
                 $_SESSION['username'] = $username;
                 echo 'Welcome ' . $_SESSION['username'] . "<br>";
             } else {
-                //header('Refresh:5; url=Login.php');
                 echo "<script>alert('Please Login'); location.href='Login.php';</script>";
             }
             $role = "SELECT * FROM users WHERE username ='$username'";
             $run_role = $db->query($role);
-            WHILE ($row = $run_role->fetch_array()) {
-                echo "You are " . $row['role'] . "<br>";}
+            WHILE ($row = $run_role->fetch_array())
+           /*     echo "You are " . $row['role'] . "<br>";}
             if ($row['role'] == 'Admin') {
                 echo "You can access Admin conf from here ";
             } elseif ($row['role'] == 'Author') {
@@ -60,9 +59,24 @@
                 echo "Please wait to be verified by the Admin" . "<br>" .
                     "You are still a pending user you can only read trips but
                  not comment";
-            }
-        }
-        ?>
+            }*/
+
+                $RoleRes = "$row";
+
+                switch ($RoleRes) {
+                    case "Admin":
+                        echo "Your favorite color is Admin!";
+                        break;
+                    case "Author":
+                        echo "Your favorite color is Author!";
+                        break;
+                    case "Reader":
+                        echo "Your favorite color is Reader!";
+                        break;
+                    default:
+                        echo "Your favorite color is neither red, blue, nor green!";
+                }
+            ?>
         </h1>
     </div>
 </div>

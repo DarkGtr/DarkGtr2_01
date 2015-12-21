@@ -59,7 +59,10 @@
                  echo "Please wait to be verified by the Admin" . "<br>" .
                      "You are still a pending user you can only read trips but
                  not comment";
-             }}
+             } else {
+                 echo "<script>alert('Please Login'); location.href='Login.php';</script>";
+             }
+             }
 
              /* $RoleRes = "$row";
 

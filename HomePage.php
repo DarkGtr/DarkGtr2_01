@@ -30,7 +30,7 @@
          require('config.php');
 
          if (isset($_POST['Login'])) {
-            include('$db');
+            //include('$db');
 
             $username = mysqli_real_escape_string($db, $_POST['username']);
             $password = mysqli_real_escape_string($db, $_POST['password']);

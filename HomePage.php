@@ -43,7 +43,12 @@
                 //header('Refresh:5; url=Login.php');
                 echo "<script>alert('Please Login'); location.href='Login.php';</script>";
             }
+            $role = "SELECT * FROM users WHERE username ='$username'";
+            $run_role = $db->query($role);
+            WHILE ($row = $run_role->fetch_array())
+                echo "<br>" . $row['role'];
         }
+
         ?>
         </h1>
         <p>

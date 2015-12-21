@@ -32,14 +32,15 @@
             $username = mysqli_real_escape_string($db, $_POST['username']);
             $password = mysqli_real_escape_string($db, $_POST['password']);
             $password = md5($password);
-            $rule = "SELECT role FROM users WHERE username ='$username'";
-            $run_rule = $db->query($rule);
-            WHILE ($row = $run_rule->fetch_array());
+
             $sqlget = "SELECT * FROM users WHERE username ='$username'
                             AND password ='$password'";
             $run_user = mysqli_query($db, $sqlget);
             $check_user= mysqli_num_rows($run_user);
             if($check_user==1){
+                $rule = "SELECT role FROM users WHERE username ='$username'";
+                $run_rule = $db->query($rule);
+                WHILE ($row = $run_rule->fetch_array())
                 $_SESSION['username']=$username;
                 echo 'Welcome ' . $_SESSION['username'] . ' You are ' .$row;
             } else {

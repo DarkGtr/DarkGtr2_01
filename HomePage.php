@@ -32,7 +32,7 @@
             $username = mysqli_real_escape_string($db, $_POST['username']);
             $password = mysqli_real_escape_string($db, $_POST['password']);
             $password = md5($password);
-            $role = "SELECT role FROM users WHERE username ='$username'";
+            $role = "SELECT email FROM users WHERE username ='$username'";
             $run_rule = $db->query($role);
             $sqlget = "SELECT * FROM users WHERE username ='$username'
                             AND password ='$password'";

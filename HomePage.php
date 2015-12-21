@@ -30,52 +30,53 @@
          require('config.php');
 
          if (isset($_POST['Login'])) {
-            //include('$db');
+             //include('$db');
 
-            $username = mysqli_real_escape_string($db, $_POST['username']);
-            $password = mysqli_real_escape_string($db, $_POST['password']);
-            $password = md5($password);
-            $sqlget = "SELECT * FROM users WHERE username ='$username'
+             $username = mysqli_real_escape_string($db, $_POST['username']);
+             $password = mysqli_real_escape_string($db, $_POST['password']);
+             $password = md5($password);
+             $sqlget = "SELECT * FROM users WHERE username ='$username'
                             AND password ='$password'";
-            $run_user = mysqli_query($db, $sqlget);
-            $check_user = mysqli_num_rows($run_user);
-            if ($check_user == 1) {
-                $_SESSION['username'] = $username;
-                echo 'Welcome ' . $_SESSION['username'] . "<br>";
-            } else {
-                echo "<script>alert('Please Login'); location.href='Login.php';</script>";
-            }
-            $role = "SELECT * FROM users WHERE username ='$username'";
-            $run_role = $db->query($role);
-            WHILE ($row = $run_role->fetch_array())
-               echo "You are " . $row['role'] . "<br>";
-            if ($role['role']=='Admin') {
-                echo "You can access Admin conf from here ";
-            } elseif ($row['role']=='Author') {
-                echo "You can add a new trip from here";
-            } elseif ($row['role']=='Reader') {
-                echo "You can just read and comment on trips";
-            } elseif ($row['role']=='Pending') {
-                echo "Please wait to be verified by the Admin" . "<br>" .
-                    "You are still a pending user you can only read trips but
+             $run_user = mysqli_query($db, $sqlget);
+             $check_user = mysqli_num_rows($run_user);
+             if ($check_user == 1) {
+                 $_SESSION['username'] = $username;
+                 echo 'Welcome ' . $_SESSION['username'] . "<br>";
+             } else {
+                 echo "<script>alert('Please Login'); location.href='Login.php';</script>";
+             }
+             $role = "SELECT * FROM users WHERE username ='$username'";
+             $run_role = $db->query($role);
+             WHILE ($row = $run_role->fetch_array())
+                 echo "You are " . $row['role'] . "<br>";
+             if ($row['role'] == 'Admin') {
+                 echo "You can access Admin conf from here ";
+             } elseif ($row['role'] == 'Author') {
+                 echo "You can add a new trip from here";
+             } elseif ($row['role'] == 'Reader') {
+                 echo "You can just read and comment on trips";
+             } elseif ($row['role'] == 'Pending') {
+                 echo "Please wait to be verified by the Admin" . "<br>" .
+                     "You are still a pending user you can only read trips but
                  not comment";
-            }
+             }
 
-               /* $RoleRes = "$row";
+             /* $RoleRes = "$row";
 
-                switch ($RoleRes) {
-                    case "Admin":
-                        echo "Your favorite color is Admin!";
-                        break;
-                    case "Author":
-                        echo "Your favorite color is Author!";
-                        break;
-                    case "Reader":
-                        echo "Your favorite color is Reader!";
-                        break;
-                    default:
-                        echo "Your favorite color is neither red, blue, nor green!";
-                }*/
+              switch ($RoleRes) {
+                  case "Admin":
+                      echo "Your favorite color is Admin!";
+                      break;
+                  case "Author":
+                      echo "Your favorite color is Author!";
+                      break;
+                  case "Reader":
+                      echo "Your favorite color is Reader!";
+                      break;
+                  default:
+                      echo "Your favorite color is neither red, blue, nor green!";
+              }*/
+         }
             ?>
         </h1>
     </div>

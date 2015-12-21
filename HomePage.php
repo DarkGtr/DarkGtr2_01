@@ -47,8 +47,8 @@
              }
              $role = "SELECT * FROM users WHERE username ='$username'";
              $run_role = $db->query($role);
-             WHILE ($row = $run_role->fetch_array())
-                 echo "You are " . $row['role'] . "<br>";
+             WHILE ($row = $run_role->fetch_array()) {
+                 echo "Role: " . $row['role'] . "<br>";
              if ($row['role'] == 'Admin') {
                  echo "You can access Admin conf from here ";
              } elseif ($row['role'] == 'Author') {
@@ -59,7 +59,7 @@
                  echo "Please wait to be verified by the Admin" . "<br>" .
                      "You are still a pending user you can only read trips but
                  not comment";
-             }
+             }}
 
              /* $RoleRes = "$row";
 

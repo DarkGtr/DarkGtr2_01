@@ -53,7 +53,7 @@
                 echo "You can add a new trip from here";
             } elseif ($row['role'] == 'Reader') {
                 echo "You can just read and comment on trips";
-            } else {
+            } elseif ($row['role'] == 'Pending') {
                 echo "You are still a pending user you can only read trips but not comment"
             }
 

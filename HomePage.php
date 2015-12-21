@@ -24,9 +24,9 @@
     <div class="Container page">
         <h1>
         <?php
-        require('config.php');
+         require('config.php');
 
-        if (isset($_POST['Login'])) {
+         if (isset($_POST['Login'])) {
             include('$db');
 
             $username = mysqli_real_escape_string($db, $_POST['username']);
@@ -45,8 +45,8 @@
             }
             $role = "SELECT * FROM users WHERE username ='$username'";
             $run_role = $db->query($role);
-            WHILE ($row = $run_role->fetch_array())
-                echo "You are " . $row['role'] . "<br>";
+            WHILE ($row = $run_role->fetch_array()) {
+                echo "You are " . $row['role'] . "<br>";}
             if ($row == 'Admin') {
                 echo "You can access Admin conf from here ";
             } elseif ($row == 'Author') {
@@ -60,7 +60,6 @@
             }
 
         }
-
         ?>
         </h1>
     </div>

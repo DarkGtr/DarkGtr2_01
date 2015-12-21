@@ -49,7 +49,7 @@
                 echo "You are " . $row['role']. "<br>";
             if ($row == 'Admin') {
                 echo "You can access Admin conf from here ";
-            } if ($row == 'Author') {
+            } elseif ($row == 'Author') {
                 echo "You can add a new trip from here";
             } else {
                 echo "You can just read and comment on trips";

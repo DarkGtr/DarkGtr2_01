@@ -58,8 +58,6 @@
              } elseif ($row['role'] == 'Pending') {
                  echo "Please wait to be verified by the Admin" . "<br>" .
                      "You can only read trips but not comment";
-             } else {
-                 echo "<script>alert('Please Login'); location.href='Login.php';</script>";
              }
              }
 

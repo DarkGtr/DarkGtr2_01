@@ -48,7 +48,7 @@
             $role = "SELECT * FROM users WHERE username ='$username'";
             $run_role = $db->query($role);
             WHILE ($row = $run_role->fetch_array())
-               echo "You are " . $row['role'] . "<br>";}
+               echo "You are " . $row['role'] . "<br>";
             /*if ($row['role'] == 'Admin') {
                 echo "You can access Admin conf from here ";
             } elseif ($row['role'] == 'Author') {

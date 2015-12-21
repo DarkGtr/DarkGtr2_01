@@ -26,7 +26,7 @@
         <?php
         require('config.php');
 
-        if (isset($_POST['Login'])){
+        if (isset($_POST['Login'])) {
             include('$db');
 
             $username = mysqli_real_escape_string($db, $_POST['username']);
@@ -35,9 +35,9 @@
             $sqlget = "SELECT * FROM users WHERE username ='$username'
                             AND password ='$password'";
             $run_user = mysqli_query($db, $sqlget);
-            $check_user= mysqli_num_rows($run_user);
-            if($check_user==1){
-                $_SESSION['username']=$username;
+            $check_user = mysqli_num_rows($run_user);
+            if ($check_user == 1) {
+                $_SESSION['username'] = $username;
                 echo 'Welcome ' . $_SESSION['username'] . "<br>";
             } else {
                 //header('Refresh:5; url=Login.php');
@@ -46,14 +46,15 @@
             $role = "SELECT * FROM users WHERE username ='$username'";
             $run_role = $db->query($role);
             WHILE ($row = $run_role->fetch_array())
-                echo "You are " . $row['role']. "<br>";
-            if ($row == 'Admin') {
+                echo "You are " . $row['role'] . "<br>";
+            if ('role' == 'Admin') {
                 echo "You can access Admin conf from here ";
-            } elseif ($row == 'Author') {
+            } elseif ('role' == 'Author') {
                 echo "You can add a new trip from here";
             } else {
                 echo "You can just read and comment on trips";
             }
+
         }
 
         ?>

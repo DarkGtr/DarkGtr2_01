@@ -60,22 +60,6 @@
                      "You can only read trips but not comment";
              }
              }
-
-             /* $RoleRes = "$row";
-
-              switch ($RoleRes) {
-                  case "Admin":
-                      echo "Your favorite color is Admin!";
-                      break;
-                  case "Author":
-                      echo "Your favorite color is Author!";
-                      break;
-                  case "Reader":
-                      echo "Your favorite color is Reader!";
-                      break;
-                  default:
-                      echo "Your favorite color is neither red, blue, nor green!";
-              }*/
          }
             ?>
         </h1>

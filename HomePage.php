@@ -49,19 +49,19 @@
             $run_role = $db->query($role);
             WHILE ($row = $run_role->fetch_array())
                echo "You are " . $row['role'] . "<br>";
-            /*if ($row['role'] == 'Admin') {
+            if ($role['role']=='Admin') {
                 echo "You can access Admin conf from here ";
-            } elseif ($row['role'] == 'Author') {
+            } elseif ($row['role']=='Author') {
                 echo "You can add a new trip from here";
-            } elseif ($row['role'] == 'Reader') {
+            } elseif ($row['role']=='Reader') {
                 echo "You can just read and comment on trips";
-            } elseif ($row['role'] == 'Pending') {
+            } elseif ($row['role']=='Pending') {
                 echo "Please wait to be verified by the Admin" . "<br>" .
                     "You are still a pending user you can only read trips but
                  not comment";
-            }*/
+            }
 
-                $RoleRes = "$row";
+               /* $RoleRes = "$row";
 
                 switch ($RoleRes) {
                     case "Admin":
@@ -75,7 +75,7 @@
                         break;
                     default:
                         echo "Your favorite color is neither red, blue, nor green!";
-                }
+                }*/
             ?>
         </h1>
     </div>

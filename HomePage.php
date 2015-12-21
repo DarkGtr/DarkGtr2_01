@@ -47,6 +47,13 @@
             $run_role = $db->query($role);
             WHILE ($row = $run_role->fetch_array())
                 echo "You are " . $row['role'];
+            if ($row = 'Admin') {
+                echo "You can access Admin conf from here ";
+            } if ($row = 'Author') {
+                echo "You can add a new trip from here";
+            } else {
+                echo "You can just read and comment on trips";
+            }
         }
 
         ?>

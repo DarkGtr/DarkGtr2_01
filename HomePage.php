@@ -32,19 +32,15 @@
             $username = mysqli_real_escape_string($db, $_POST['username']);
             $password = mysqli_real_escape_string($db, $_POST['password']);
             $password = md5($password);
-            $rule = mysqli_query("SELECT rule FROM users WHERE username ='$username'");
+            $role = "SELECT role FROM users WHERE username ='$username'";
+            $run_rule = $db->query($role);
             $sqlget = "SELECT * FROM users WHERE username ='$username'
                             AND password ='$password'";
             $run_user = mysqli_query($db, $sqlget);
             $check_user= mysqli_num_rows($run_user);
             if($check_user==1){
-               // $rule = "SELECT role FROM users WHERE username ='$username'";
-             //   $run_rule = $db->query($rule);
                 $_SESSION['username']=$username;
-                echo 'Welcome ' . $_SESSION['username'] . $rule;
-               // WHILE ($row = $run_rule ->fetch_field()) {
-                   // echo "You are " . $row;
-                //}
+                echo 'Welcome ' . $_SESSION['username'] . $role;
             } else {
                 //header('Refresh:5; url=Login.php');
                 echo "<script>alert('Please Login'); location.href='Login.php';</script>";

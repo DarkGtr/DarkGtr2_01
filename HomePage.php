@@ -57,8 +57,7 @@
                  echo "You can just read and comment on trips";
              } elseif ($row['role'] == 'Pending') {
                  echo "Please wait to be verified by the Admin" . "<br>" .
-                     "You are still a pending user you can only read trips but
-                 not comment";
+                     "You can only read trips but not comment";
              } else {
                  echo "<script>alert('Please Login'); location.href='Login.php';</script>";
              }

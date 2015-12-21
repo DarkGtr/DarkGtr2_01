@@ -51,8 +51,10 @@
                 echo "You can access Admin conf from here ";
             } elseif ($row['role'] == 'Author') {
                 echo "You can add a new trip from here";
-            } else {
+            } elseif ($row['role'] == 'Reader') {
                 echo "You can just read and comment on trips";
+            } else {
+                echo "You are still a pending user you can only read trips but not comment"
             }
 
         }

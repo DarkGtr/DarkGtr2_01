@@ -41,7 +41,10 @@
                 $rule = "SELECT role FROM users WHERE username ='$username'";
                 $run_rule = $db->query($rule);
                 $_SESSION['username']=$username;
-                echo 'Welcome ' . $_SESSION['username'] . ' You are ' .$run_rule;
+                echo 'Welcome ' . $_SESSION['username'];
+                WHILE ($row = $run_rule ->fetch_field()) {
+                    echo "You are " . $row;
+                }
             } else {
                 //header('Refresh:5; url=Login.php');
                 echo "<script>alert('Please Login'); location.href='Login.php';</script>";

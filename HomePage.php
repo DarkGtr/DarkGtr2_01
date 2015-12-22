@@ -50,15 +50,22 @@
              WHILE ($row = $run_role->fetch_array()) {
                  echo "Role: " . $row['role'] . "<br>";
              if ($row['role'] == 'Admin') {
-                 echo "You can access Admin conf from here ";
+                 echo "You can access Admin conf from here " . "<a href=admin.php
+                 >Admin Conf</a>";
              } elseif ($row['role'] == 'Author') {
-                 echo "You can add a new trip from here";
+                 echo "You can add a new trip from here" . "<a href=editor.php
+                 >Admin Conf</a>";
              } elseif ($row['role'] == 'Reader') {
                  echo "You can just read and comment on trips";
              } elseif ($row['role'] == 'Pending') {
                  echo "Please wait to be verified by the Admin" . "<br>" .
                      "You can only read trips";
              }
+                /* if ($row['role'] == 'Admin') {
+
+                 } elseif ($row['role'] == 'Author') {
+                     --
+                 }*/
              }
          }
             ?>

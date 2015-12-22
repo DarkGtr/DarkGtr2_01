@@ -22,6 +22,7 @@
 </div>
 <div ID="MainArea">
     <div class="Container page">
+        <div ID="WelcomeCode">
         <h1>
         <?php
         ini_set('display_errors', 1);
@@ -53,7 +54,7 @@
                  echo "You can access Admin conf from here " . "<a href=admin.php
                  >Admin Conf</a>";
              } elseif ($row['role'] == 'Author') {
-                 echo "You can add a new trip from here" . "<a href=editor.php
+                 echo "You can add a new trip from here " . "<a href=editor.php
                  >Add trip</a>";
              } elseif ($row['role'] == 'Reader') {
                  echo "You can just read and comment on trips";
@@ -61,15 +62,11 @@
                  echo "Please wait to be verified by the Admin" . "<br>" .
                      "You can only read trips";
              }
-                /* if ($row['role'] == 'Admin') {
-
-                 } elseif ($row['role'] == 'Author') {
-                     --
-                 }*/
              }
          }
             ?>
         </h1>
+        </div>
     </div>
 </div>
 <div ID="footer">

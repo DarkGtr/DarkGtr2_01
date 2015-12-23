@@ -18,7 +18,6 @@
         </div>
         <div ID="NavArea">
             <ul ID="Nav">
-                <a href="index.html"><li>Home</li></a>
                 <a href="Logout.php"><li>Logout</li></a>
             </ul>
         </div>

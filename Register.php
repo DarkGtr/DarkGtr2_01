@@ -12,7 +12,7 @@
         ('$username', '$email', '$password')";
 
         if (!mysqli_query($db, $sqlinsert)) {
-            die('Error inserting new record');
+            die('Username or Email has been used already');
         }
 
         $newrecord = "You're successfully registered";
@@ -53,7 +53,7 @@
                 <input type="password" name="password"><br>
                 <input ID="LoginButton" type="submit" name="Register" value="Register">
                 <?php
-                echo $newrecord;
+                    echo $newrecord;
                 ?>
             </form>
         </div>

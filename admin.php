@@ -1,9 +1,9 @@
 <?php
     session_start();
-    if (!(isset($_SESSION['username']) && $_SESSION['username'] != '')) {
+    if (!(isset($_SESSION['login']) && $_SESSION['login'] != '')) {
         echo "<script>alert('Please Login'); location.href='Login.php';</script>";
     } else {
-        echo $_SESSION['username'];
+        $_SESSION['username'];
     }
 ?>
 <!DOCTYPE html>

@@ -46,7 +46,7 @@
                  $_SESSION['username'] = $username;
                  echo 'Welcome ' . $_SESSION['username'] . "<br>";
              } else {
-                 echo "<script>alert('Please Login'); location.href='Login.php';</script>";
+                 echo "<script>alert('Username or Password is incorrect'); location.href='Login.php';</script>";
              }
              $role = "SELECT * FROM users WHERE username ='$username'";
              $run_role = $db->query($role);

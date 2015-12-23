@@ -1,4 +1,8 @@
-
+<?php
+    if (isset($_POST['Login'])) {
+        echo "<script>alert('Please Login'); location.href='Login.php';</script>";
+    }
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -31,7 +35,6 @@
          require('config.php');
 
          if (isset($_POST['Login'])) {
-             //include('$db');
 
              $username = mysqli_real_escape_string($db, $_POST['username']);
              $password = mysqli_real_escape_string($db, $_POST['password']);

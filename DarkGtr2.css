@@ -127,9 +127,10 @@ body{
 #WelcomeCode a {
     text-decoration: none;
     border: 1px solid black;
-    border-radius: 5px;
+    border-radius: 2px;
     font-size: 16px;
     color: black;
+    padding: 4px;
 }
 
 #WelcomeCode a:hover{

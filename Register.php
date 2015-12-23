@@ -12,7 +12,7 @@
         ('$username', '$email', '$password')";
 
         if (!mysqli_query($db, $sqlinsert)) {
-            die('Username or Email has been used already');
+           echo "<script>alert('Username or Email has been used already'); location.href='Register.php';</script>";
         }
 
         $newrecord = "You're successfully registered";

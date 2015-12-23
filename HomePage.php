@@ -51,7 +51,7 @@
              WHILE ($row = $run_role->fetch_array()) {
                  echo "Role: " . $row['role'] . "<br>";
              if ($row['role'] == 'Admin') {
-                 echo "You can access Admin conf from here " . "<a href=admin.php
+                 echo "You can access Admin configurations from here " . "<a href=admin.php
                  >Admin Conf</a>" . "<br>" . "and add trip from here " . "<a href=editor.php
                  >Add trip</a>";
              } elseif ($row['role'] == 'Author') {

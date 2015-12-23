@@ -121,14 +121,15 @@ body{
 }
 
 #WelcomeCode h1 {
-    font-size: 12px
+    font-size: 24px
 }
 
 #WelcomeCode a {
     text-decoration: none;
     border: 1px solid silver;
     border-radius: 5px;
-    font-size: 10px;
+    font-size: 16px;
+    color: black;
 }
 
 #WelcomeCode a:hover{

@@ -1,5 +1,5 @@
 <?php
-    session_start();
+
     if (!isset($_POST['Login'])) {
         echo "<script>alert('Please Login'); location.href='Login.php';</script>";
     }
@@ -44,6 +44,7 @@
              $run_user = mysqli_query($db, $sqlget);
              $check_user = mysqli_num_rows($run_user);
              if ($check_user == 1) {
+                 session_start();
                  $_SESSION['username'] = $username;
                  echo 'Welcome ' . $_SESSION['username'] . "<br>";
              } else {

@@ -40,7 +40,7 @@
 <div ID="MainArea">
     <div class="Container page">
         <h1> <?php echo "Admin: " . $_SESSION['username']; ?> </h1>
-        <h1> Admin verify </h1>
+        <h1> Admin verify  </h1>
     </div>
 </div>
 <div ID="footer">

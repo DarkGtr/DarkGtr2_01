@@ -1,5 +1,4 @@
 <?php
-    session_start();
     if (!isset($_POST['Login'])) {
         echo "<script>alert('Please Login'); location.href='Login.php';</script>";
     }
@@ -35,7 +34,7 @@
          require('config.php');
 
          if (isset($_POST['Login'])) {
-
+             session_start();
              $username = mysqli_real_escape_string($db, $_POST['username']);
              $password = mysqli_real_escape_string($db, $_POST['password']);
              $password = md5($password);
@@ -44,7 +43,6 @@
              $run_user = mysqli_query($db, $sqlget);
              $check_user = mysqli_num_rows($run_user);
              if ($check_user == 1) {
-                 session_start();
                  $_SESSION['username'] = $username;
                  echo 'Welcome ' . $_SESSION['username'] . "<br>";
              } else {

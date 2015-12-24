@@ -89,7 +89,7 @@
                     <td><?php echo $u_username2; ?></td>
                     <td><?php echo $u_role2; ?></td>
                     <td>
-                        <form action="Adconf.php?" method="get">
+                        <form action="Adconf.php?update=<?php echo $u_username2; ?>" method="get">
                             <select name="update">
                                 <option value="Pending">Pending</option>
                                 <option value="Reader">Reader</option>

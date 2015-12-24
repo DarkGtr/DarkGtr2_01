@@ -27,7 +27,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>index</title>
+    <title>Editor</title>
     <link rel="stylesheet" type="text/css" href="DarkGtr2.css">
     <link rel="shortcut icon" href="#">
 </head>

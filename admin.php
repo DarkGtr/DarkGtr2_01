@@ -86,8 +86,8 @@
                     <td><?php echo $u_username; ?></td>
                     <td><?php echo $u_role; ?></td>
                     <td>
-                        <form action="update.php?submit=<?php echo $u_username ?>" method="get">
-                            <select name="update">
+                        <form action="update.php" method="get">
+                            <select name="update<?php echo $u_username ?>">
                                 <option value="Pending">Pending</option>
                                 <option value="Reader">Reader</option>
                                 <option value="Author">Author</option>

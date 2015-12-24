@@ -1,4 +1,8 @@
 <?php
+    session_start();
+        if (!(isset($_SESSION['username']) && $_SESSION['username'] != '')) {
+            echo "<script>alert('Please Login'); location.href='Login.php';</script>";
+        }
     if (!isset($_POST['Login'])) {
         echo "<script>alert('Please Login'); location.href='Login.php';</script>";
     }
@@ -34,7 +38,6 @@
          require('config.php');
 
          if (isset($_POST['Login'])) {
-             session_start();
              $username = mysqli_real_escape_string($db, $_POST['username']);
              $password = mysqli_real_escape_string($db, $_POST['password']);
              $password = md5($password);

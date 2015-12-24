@@ -29,7 +29,7 @@
 </div>
 <div ID="MainArea">
     <div class="Container page">
-        <h1> Editing </h1>
+        <h1> Editing <?php echo $_SESSION['username']; ?> </h1>
     </div>
 </div>
 <div ID="footer">

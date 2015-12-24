@@ -37,7 +37,7 @@
         error_reporting(E_ALL);
          require('config.php');
 
-             echo 'Welcome ' . $_SESSION['username'] . "<br>";
+             echo 'Welcome ' . $_SESSION['username'] . "!" . "<br>";
              $role = "SELECT * FROM users WHERE username ='{$_SESSION['username']}'";
              $run_role = $db->query($role);
              WHILE ($row = $run_role->fetch_array()) {

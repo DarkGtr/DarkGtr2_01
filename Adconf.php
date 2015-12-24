@@ -9,7 +9,7 @@
     $run_query = $db->query($del_query);
     while($row = $run_query->fetch_array())
 
-    if ($run_query) {
+    if ($row) {
         echo "<script>window.open('admin.php?deleted=user has been deleted!!!','_self')
     </script>";
     }

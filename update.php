@@ -6,12 +6,10 @@
 
     $update_id = $_GET['update'];
     $update_role = $_GET['updateRole'];
-    $up_query = "UPDATE 'role' SET '$update_id' WHERE 'username'='$update_role'";
+    $up_query = "UPDATE role SET '$update_id' WHERE username='$update_role'";
     $run_query2 = $db->query($up_query);
 
     if ($run_query2) {
         echo "<script>alert('Updated!'); location.href='admin.php?level=role';</script>";
     }
-
-
 ?>

@@ -99,5 +99,12 @@
          $post_hashtags = $_POST['hashtags'];
          $post_content = $_POST['content'];
          $post_image = $_FILES['image']['name'];
+
+        if ($post_title==''){
+            echo "<script>alert('Please enter a title')</script>";
+        } elseif($post_content==''){
+            echo  "<script>alert('Please enter content')</script>";
+        } exit();
+
     }
 ?>

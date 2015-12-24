@@ -9,9 +9,7 @@
     $run_role = $db->query($role);
     WHILE ($row = $run_role->fetch_array()) {
     echo "Role: " . $row['role'] . "<br>";
-    if ($row['role'] == 'Admin') {
-
-    } else {
+    if ($row['role'] != 'Admin') {
         die('error');
      }
     }

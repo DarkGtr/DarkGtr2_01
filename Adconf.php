@@ -7,11 +7,10 @@
     $delete_id = $_GET['del'];
     $del_query = "DELETE from users WHERE username='$delete_id'";
     $run_query = $db->query($del_query);
-    while($row = $run_query->fetch_array())
 
-    if ($row) {
-        echo "<script>window.open('admin.php?user=delete has been deleted!!!','_self')
-    </script>";
+
+    if ($run_query) {
+        echo "<script>alert('User Deleted'); location.href='admin.php?user=delete';</script>";
     }
 
 ?>

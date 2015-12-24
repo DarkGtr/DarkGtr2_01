@@ -80,21 +80,21 @@
                 </tr>
                 <tr>
                     <?php
-                        $list_query2 = "SELECT * FROM users";
-                        $run_query2 = $db->query($list_query2);
-                        while($row2 = $run_query2->fetch_array()) {
-                            $u_username2 = $row2['username'];
-                            $u_role2 = $row2['role'];
+                        $list_query = "SELECT * FROM users";
+                        $run_query = $db->query($list_query2);
+                        while($row = $run_query->fetch_array()) {
+                            $u_username = $row['username'];
+                            $u_role = $row['role'];
                     ?>
                     <td><?php echo $u_username2; ?></td>
                     <td><?php echo $u_role2; ?></td>
                     <td>
                         <?php
                         $update_id = $_GET['update'];
-                        $up_query = "UPDATE users SET role='$update_id' WHERE username='$u_username2'";
-                        $run_query2 = $db->query($up_query);
+                        $up_query = "UPDATE users SET role='$update_id' WHERE username='$u_username'";
+                        $run_query = $db->query($up_query);
 
-                        if ($run_query2) {
+                        if ($run_query) {
                         echo "<script>alert('Updated!'); location.href='admin.php?level=role';</script>";
                         } ?>
                         <form action="admin.php" method="get">

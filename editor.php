@@ -58,7 +58,7 @@
                 </tr>
                 <tr>
                     <td>Post Author:</td>
-                    <td><?php echo $_Session['username']?> </td>
+                    <td><?php echo $_SESSION['username']; ?> </td>
                 </tr>
                 <tr>
                     <td>Post Country:</td>

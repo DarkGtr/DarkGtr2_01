@@ -51,7 +51,7 @@
                 if(isset($_GET['user']) && !empty($_GET['user'])){
             ?>
             <table>
-                <tr>
+                <tr width="150px">
                     <th>Username</th>
                     <th>Delete User</th>
                 </tr>

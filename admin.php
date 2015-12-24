@@ -43,7 +43,7 @@
     <div class="Container page">
         <h1> <?php echo "Admin: " . $_SESSION['username']; ?> </h1>
         <p>
-            <a href="admin.php?user=delete">Users_level</a>
+            <a href="admin.php?user=delete">Users_level </a> ||
             <a href="">Users_delete</a>
         </p>
         <p>
@@ -53,7 +53,7 @@
             <table>
                 <tr><td width="150px">Users</td><td>Options</td></tr>
             <?php
-                $list_query = mysqli_query("SELECT username FROM users");
+                $list_query = mysqli_query("SELECT username, email FROM users");
                 while($run_list = mysqli_fetch_array($list_query)){
                     $u_username = $run_list['username'];
 

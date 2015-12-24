@@ -69,6 +69,9 @@
             </table>
         </h3>
         <h3>
+            <?php
+                if(isset($_GET['level']) && !empty($_GET['level'])){
+            ?>
             <table>
                 <tr>
                     <th>Username</th>
@@ -77,7 +80,6 @@
                 </tr>
                 <tr>
                     <?php
-                        if(isset($_GET['level']) && !empty($_GET['level'])){
                         $list_query2 = "SELECT * FROM users";
                         $run_query2 = $db->query($list_query2);
                         while($row2 = $run_query2->fetch_array()) {

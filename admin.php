@@ -89,13 +89,21 @@
                     <td><?php echo $u_username2; ?></td>
                     <td><?php echo $u_role2; ?></td>
                     <td>
-                        <form action="update.php" method="get">
+                        <?php
+                        $update_id = $_GET['update'];
+                        $up_query = "UPDATE 'role' SET '$update_id' WHERE 'username'='$u_username2'";
+                        $run_query2 = $db->query($up_query);
+
+                        if ($run_query2) {
+                        echo "<script>alert('Updated!'); location.href='admin.php?level=role';</script>";
+                        } ?>
+                        <form action="admin.php" method="get">
                             <select name="update">
                                 <option value="Pending">Pending</option>
                                 <option value="Reader">Reader</option>
                                 <option value="Author">Author</option>
                                 <option value="Admin">Admin</option>
-                            <input name="updateR" type="submit" value="Go"/>
+                            <input type="submit" value="Update"/>
                             </select>
                         </form>
                     </td>

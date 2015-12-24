@@ -138,5 +138,6 @@ body{
 }
 
 table th,tr,td {
-    margin-left: 20px;
+    padding-right: 58px;
+
 }

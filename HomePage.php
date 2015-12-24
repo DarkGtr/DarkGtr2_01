@@ -1,5 +1,5 @@
 <?php
-
+    session_start();
     if (!isset($_POST['Login'])) {
         echo "<script>alert('Please Login'); location.href='Login.php';</script>";
     }

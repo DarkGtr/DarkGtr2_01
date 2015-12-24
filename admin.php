@@ -43,15 +43,15 @@
     <div class="Container page">
         <h1> <?php echo "Admin: " . $_SESSION['username']; ?> </h1>
         <p>
-            <a href="admin.php?user=delete">Users_level  </a> |
-            <a href="">Users_delete</a>
+            <a href="admin.php?level">Users_level</a> |
+            <a href="admin.php?delete">Users_delete</a>
         </p>
         <p>
             <?php
-                if(isset($_GET['user']) && !empty($_GET['user'])){
+                if(isset($_GET['delete']) && !empty($_GET['delete'])){
             ?>
             <table>
-                <tr><td width="150px">Users</td><td>Options</td></tr>
+                <tr><td width="150px">Users</td><td>Delete User</td></tr>
             <?php
                 $list_query = "SELECT * FROM users";
                 $run_query = $db->query($list_query);
@@ -61,13 +61,8 @@
 
             ?>
             <tr><td><?php echo $u_username; ?></td><td>
-                    <?php
-                    if($u_username == 'delete') {
-                        echo "<a href=''>Delete</a>";
-                    }
-                    }}
-                    ?>
-                </td></tr>
+                    <a href="Adconf.php?del=<?php echo $u_username; }}?>">Delete</a>
+            </td></tr>
 
             </table>
         </p>

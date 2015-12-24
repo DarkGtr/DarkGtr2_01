@@ -4,8 +4,12 @@
     error_reporting(E_ALL);
     require('config.php');
 
-    $searchP = "SELECT * FROM users WHERE role = 'Pending'";
-    $searchR = "SELECT * FROM users WHERE role = 'Reader'";
-    $searchA = "SELECT * FROM users WHERE role = 'Author'";
+    $delete_id = $_GET['del'];
+    $del_query = "DELETE from users WHERE username='$delete_id'";
+
+    if(mysql_query($del_query)) {
+        echo "<script>window.open('view_admin.php?deleted=user has been deleted!!!','_self')
+    </script>";
+    }
 
 ?>

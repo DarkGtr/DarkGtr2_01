@@ -5,18 +5,18 @@
     }
 ?>
 <?php
-ini_set('display_errors', 1);
-ini_set('display_startup_errors', 1);
-error_reporting(E_ALL);
-require('config.php');
+    ini_set('display_errors', 1);
+    ini_set('display_startup_errors', 1);
+    error_reporting(E_ALL);
+    require('config.php');
 
-$role = "SELECT * FROM users WHERE username ='{$_SESSION['username']}'";
-$run_role = $db->query($role);
-WHILE ($row = $run_role->fetch_array())
-    $row['role'];
-if ($row['role'] != 'Admin') {
-    echo ("error");
-}
+    $role = "SELECT * FROM users WHERE username ='{$_SESSION['username']}'";
+    $run_role = $db->query($role);
+    WHILE ($row = $run_role->fetch_array()) {
+        $row['role'];
+    if ($row['role'] != 'Admin') {
+        echo ("error");
+    }}
 ?>
 <!DOCTYPE html>
 <html lang="en">

@@ -74,7 +74,7 @@
                 </tr>
                 <tr>
                     <td>Post Image:</td>
-                    <td><input type="text" name="image"></td>
+                    <td><input type="file" name="image"></td>
                 </tr>
                 <tr>
                     <td><input type="submit" name="submit" value="Publish"></td>

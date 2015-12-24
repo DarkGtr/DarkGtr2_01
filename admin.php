@@ -64,7 +64,7 @@
                     $u_role = $row['role'];
                     ?>
                     <td><?php echo $u_username; ?></td>
-                    <td><a href="Adconf.php?del=<?php echo $u_username;?>">Delete</a></td>
+                    <td><a href="delete.php?del=<?php echo $u_username;?>">Delete</a></td>
                 </tr> <?php }} ?>
             </table>
         </h3>
@@ -89,7 +89,7 @@
                     <td><?php echo $u_username2; ?></td>
                     <td><?php echo $u_role2; ?></td>
                     <td>
-                        <form action="Adconf.php" method="get">
+                        <form action="update.php" method="get">
                             <select name="update">
                                 <option value="Pending">Pending</option>
                                 <option value="Reader">Reader</option>

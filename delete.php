@@ -14,14 +14,4 @@
     }
 
 ?>
-<?php
-    $update_id = $_GET['update'];
-    $up_query = "UPDATE 'role' FROM 'users' WHERE 'username'='$update_id'";
-    $run_query2 = $db->query($up_query);
 
-    if ($run_query2) {
-        echo "<script>alert('Updated!'); location.href='admin.php?level=role';</script>";
-    }
-
-
-?>

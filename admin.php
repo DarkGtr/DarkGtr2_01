@@ -74,7 +74,7 @@
             ?>
             <table>
                 <tr>
-                    <th width="150px">Username</th>
+                    <th width="150px; text-align: left;">Username</th>
                     <th width="150px">Role</th>
                     <th>Change Role To</th>
                 </tr>

@@ -9,7 +9,7 @@
         $update_id = $_POST['update'];
         $updateR = $_POST['submit'];
 
-        $up_query = "UPDATE users SET role='$update_id' WHERE 'username'='$u_username'";
+        $up_query = "UPDATE users SET role='$update_id' WHERE 'username'='$updateR'";
         $run_query2 = $db->query($up_query);
 
         if ($run_query2) {

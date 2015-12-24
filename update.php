@@ -11,6 +11,7 @@
 
         $up_query = "UPDATE users SET role='$update_id' WHERE 'username'='$updateR'";
         $run_query2 = $db->query($up_query);
+        echo $update_id . $updateR;
 
         if ($run_query2) {
             echo "<script>alert('Updated!'); location.href='admin.php?level=role';</script>";

@@ -109,16 +109,17 @@
             echo "<script>alert('Please enter a title')</script>";
         } elseif($post_content==''){
             echo  "<script>alert('Please enter content')</script>";
-        } exit();
+            exit();
+        }
 
     } else {
-        $insert_query1 = "INSERT INTO gallery (url) VALUES ('$post_image')"
+        $insert_query1 = "INSERT INTO gallery (url) VALUES ('$post_image')";
         $insert_query2 = "INSERT INTO post (username, p_date, p_title, tap_info, p_country, p_tag)
                                     VALUES ('$post_Author', '$post_date', '$post_title', '$post_content',
                                             '$post_country', '$post_hashtags')";
-        if (mysqli_query($insert_query2)){
+        if ($insert_query2){
             echo "<script>alert('You have uploaded the trip successfully')</script>";
-        }
+        }}
 ?>
-    }
+
 

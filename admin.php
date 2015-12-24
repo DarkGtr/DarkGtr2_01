@@ -86,8 +86,8 @@
                             $u_username = $row['username'];
                             $u_role = $row['role'];
                     ?>
-                    <td><?php echo $u_username2; ?></td>
-                    <td><?php echo $u_role2; ?></td>
+                    <td><?php echo $u_username; ?></td>
+                    <td><?php echo $u_role; ?></td>
                     <td>
                         <?php
                         $update_id = $_GET['update'];

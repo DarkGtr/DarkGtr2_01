@@ -7,8 +7,9 @@
     $delete_id = $_GET['del'];
     $del_query = "DELETE from users WHERE username='$delete_id'";
     $run_query = $db->query($del_query);
+    while($row = $run_query->fetch_array())
 
-    if(mysqli_query($query)) {
+    if ($run_query) {
         echo "<script>window.open('admin.php?deleted=user has been deleted!!!','_self')
     </script>";
     }

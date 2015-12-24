@@ -69,9 +69,6 @@
             </table>
         </h3>
         <h3>
-            <?php
-                if(isset($_GET['level']) && !empty($_GET['level'])){
-            ?>
             <table>
                 <tr>
                     <th>Username</th>
@@ -80,6 +77,7 @@
                 </tr>
                 <tr>
                     <?php
+                        if(isset($_GET['level']) && !empty($_GET['level'])){
                         $list_query2 = "SELECT * FROM users";
                         $run_query2 = $db->query($list_query2);
                         while($row2 = $run_query2->fetch_array()) {
@@ -97,7 +95,7 @@
                         if ($run_query2) {
                         echo "<script>alert('Updated!'); location.href='admin.php?level=role';</script>";
                         } ?>
-                        <form action="admin.php?level=<?php echo $u_username2 ?>" method="get">
+                        <form action="admin.php?update=<?php echo $u_username2 ?>" method="get">
                             <select name="update">
                                 <option value="Pending">Pending</option>
                                 <option value="Reader">Reader</option>

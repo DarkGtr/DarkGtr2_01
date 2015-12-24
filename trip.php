@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Authors</title>
+    <title>Trip</title>
     <link rel="stylesheet" type="text/css" href="DarkGtr2.css">
     <link rel="shortcut icon" href="#">
 </head>

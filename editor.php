@@ -40,6 +40,7 @@
         <div ID="NavArea">
             <ul ID="Nav">
                 <a href="Logout.php"><li>Logout</li></a>
+                <a href="HomePage.php"><li>Home</li></a>
             </ul>
         </div>
     </div>

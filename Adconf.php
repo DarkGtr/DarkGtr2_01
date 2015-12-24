@@ -10,7 +10,7 @@
     while($row = $run_query->fetch_array())
 
     if ($row) {
-        echo "<script>window.open('admin.php?deleted=user has been deleted!!!','_self')
+        echo "<script>window.open('admin.php?user=delete has been deleted!!!','_self')
     </script>";
     }
 

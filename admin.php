@@ -95,7 +95,7 @@
                                 <option value="Reader">Reader</option>
                                 <option value="Author">Author</option>
                                 <option value="Admin">Admin</option>
-                            <input type="submit" value="update"/>
+                            <input name="updateR" type="submit" value="update"/>
                             </select>
                         </form>
                     </td>

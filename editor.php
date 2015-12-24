@@ -65,10 +65,6 @@
                     <td><?php echo $_SESSION['username']; ?> </td>
                 </tr>
                 <tr>
-                    <td>Post Country:</td>
-                    <td><input type="text" name="country"></td>
-                </tr>
-                <tr>
                     <td>Post Hashtags:</td>
                     <td><input type="text" name="hashtags"></td>
                 </tr>

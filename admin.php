@@ -91,7 +91,7 @@
                     <td>
                         <?php
                         $update_id = $_GET['update'];
-                        $up_query = "UPDATE 'role' SET '$update_id' WHERE 'username'='$u_username2'";
+                        $up_query = "UPDATE role SET '$update_id' WHERE username='$u_username2'";
                         $run_query2 = $db->query($up_query);
 
                         if ($run_query2) {

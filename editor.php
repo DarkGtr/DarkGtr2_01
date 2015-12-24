@@ -89,3 +89,15 @@
     </div>
 </div>
 </body>
+<?php
+
+    if(isset($_POST['submit'])){
+
+        echo $post_title = $_POST['title'];
+        echo $post_date = date('d-m-y');
+        echo $post_Author = $_POST['Author'];
+        echo $post_hashtags = $_POST['hashtags'];
+        echo $post_content = $_POST['content'];
+        echo $post_image = $_POST['image']['name'];
+    }
+?>

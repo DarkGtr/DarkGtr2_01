@@ -64,8 +64,8 @@
                     $u_role = $row['role'];
                     ?>
                     <td><?php echo $u_username; ?></td>
-                    <td><a href="Adconf.php?del=<?php echo $u_username;}}?>">Delete</a></td>
-                </tr>
+                    <td><a href="Adconf.php?del=<?php echo $u_username;?>">Delete</a></td>
+                </tr> <?php }} ?>
             </table>
         </p>
 

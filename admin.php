@@ -3,16 +3,14 @@
     if (!(isset($_SESSION['username']) && $_SESSION['username'] != '')) {
         echo "<script>alert('Please Login'); location.href='Login.php';</script>";
     }
-    $username = $_SESSION['username'];
+    /*$username = $_SESSION['username'];
     $role = "SELECT * FROM users WHERE username ='$username'";
     $run_role = $db->query($role);
     WHILE ($row = $run_role->fetch_array())
     $row['role'];
     if ($row['role'] != 'Admin') {
         echo ("error");
-    } else {
-        $_SESSION['username'];
-    }
+    }*/
 
 ?>
 <!DOCTYPE html>

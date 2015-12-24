@@ -15,7 +15,7 @@
     WHILE ($row = $run_role->fetch_array()) {
         $row['role'];
     if ($row['role'] != 'Admin') {
-        echo ("error");
+        die ("error");
     }}
 ?>
 <!DOCTYPE html>

@@ -53,9 +53,10 @@
             <table>
                 <tr><td width="150px">Users</td><td>Options</td></tr>
             <?php
-                $list_query = mysqli_query("SELECT username, email FROM users");
+                $list_query = mysqli_query("SELECT username, role FROM users");
                 while($run_list = mysqli_fetch_array($list_query)){
                     $u_username = $run_list['username'];
+                    $u_role = $run_role['role'];
 
             ?>
             <tr><td><?php echo $u_username; ?></td><td>

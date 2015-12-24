@@ -44,11 +44,11 @@
         <h1> <?php echo "Admin: " . $_SESSION['username']; ?> </h1>
         <p>
             <a href="admin.php?user=level">Users_level</a> |
-            <a href="admin.php?user=delete">Users_delete</a>
+            <a href="admin.php?user=del">Users_delete</a>
         </p>
         <p>
             <?php
-                if(isset($_GET['delete']) && !empty($_GET['delete'])){
+                if(isset($_GET['user']) && !empty($_GET['user'])){
             ?>
             <table>
                 <tr>

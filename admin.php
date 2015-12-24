@@ -81,7 +81,7 @@
                 <tr>
                     <?php
                         $list_query = "SELECT * FROM users";
-                        $run_query = $db->query($list_query2);
+                        $run_query = $db->query($list_query);
                         while($row = $run_query->fetch_array()) {
                             $u_username = $row['username'];
                             $u_role = $row['role'];

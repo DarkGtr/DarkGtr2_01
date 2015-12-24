@@ -70,7 +70,7 @@
                 </tr>
                 <tr>
                     <td>Post Content:</td>
-                    <td><textarea name="content" cols="20" rows="20"</textarea></td>
+                    <td><textarea name="content" cols="20" rows="20"></textarea></td>
                 </tr>
                 <tr>
                     <td>Post Image:</td>

@@ -95,23 +95,22 @@
 </body>
 <?php
 
-    if(isset($_POST['submit'])){
+    if(isset($_POST['submit'])) {
 
-         $post_title = $_POST['title'];
-         $post_country = $_POST['country'];
-         $post_date = date('d-m-y');
-         $post_Author = $_SESSION['username'];
-         $post_hashtags = $_POST['hashtags'];
-         $post_content = $_POST['content'];
-         $post_image = $_FILES['image'];
+        $post_title = $_POST['title'];
+        $post_country = $_POST['country'];
+        $post_date = date('d-m-y');
+        $post_Author = $_SESSION['username'];
+        $post_hashtags = $_POST['hashtags'];
+        $post_content = $_POST['content'];
+        $post_image = $_FILES['image'];
 
-        $insert_query1 = "INSERT INTO gallery (url) VALUES ('$post_image')";
-        $insert_query2 = "INSERT INTO post (username, p_date, p_title, tap_info, p_country, p_tag)
+        $insert_query = "INSERT INTO post (username, p_date, p_title, tap_info, p_country, p_tag)
                                     VALUES ('$post_Author', '$post_date', '$post_title', '$post_content',
                                             '$post_country', '$post_hashtags')";
-        $run_user = mysqli_query($db, $insert_query2);
+        $run_user = mysqli_query($db, $insert_query);
 
-        if ($run_user) {
+     elseif ($run_user) {
             echo "<script>alert('You have uploaded the trip successfully')</script>";
         } elseif ($post_title=='') {
             echo "<script>alert('Please enter a title')</script>";

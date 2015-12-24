@@ -97,7 +97,7 @@
                         if ($run_query2) {
                         echo "<script>alert('Updated!'); location.href='admin.php?level=role';</script>";
                         } ?>
-                        <form action="admin.php?update=<?php echo $u_username2 ?>" method="get">
+                        <form action="admin.php" method="get">
                             <select name="update">
                                 <option value="Pending">Pending</option>
                                 <option value="Reader">Reader</option>

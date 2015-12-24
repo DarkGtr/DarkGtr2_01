@@ -5,6 +5,16 @@
     } else {
         $_SESSION['username'];
     }
+    $role = "SELECT * FROM users WHERE username ='$username'";
+    $run_role = $db->query($role);
+    WHILE ($row = $run_role->fetch_array()) {
+    echo "Role: " . $row['role'] . "<br>";
+    if ($row['role'] == 'Admin') {
+
+    } else {
+        die('error');
+     }
+    }
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -29,7 +39,7 @@
 </div>
 <div ID="MainArea">
     <div class="Container page">
-        <h1> <?php echo $_SESSION['username']; ?> </h1>
+        <h1> <?php echo "Admin: " . $_SESSION['username']; ?> </h1>
         <h1> Admin verify </h1>
     </div>
 </div>

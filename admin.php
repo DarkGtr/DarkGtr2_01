@@ -43,7 +43,7 @@
     <div class="Container page">
         <h1> <?php echo "Admin: " . $_SESSION['username']; ?> </h1>
         <p>
-            <a href="admin.php?user=delete">Users_level </a> ||
+            <a href="admin.php?user=delete">Users_level </a> |
             <a href="">Users_delete</a>
         </p>
         <p>

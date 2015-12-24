@@ -22,8 +22,8 @@
         </div>
         <div ID="NavArea">
             <ul ID="Nav">
-                <a href="authors.php"><li>Authors</li></a>
                 <a href="Logout.php"><li>Logout</li></a>
+                <a href="authors.php"><li>Authors</li></a>
             </ul>
         </div>
     </div>

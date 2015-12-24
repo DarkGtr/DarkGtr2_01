@@ -1,6 +1,7 @@
 <?php
     session_start();
-    $role = "SELECT * FROM users WHERE username ='['username']'";
+    $username = $_SESSION['username'];
+    $role = "SELECT * FROM users WHERE username ='$username'";
     $run_role = $db->query($role);
     WHILE ($row = $run_role->fetch_array())
     $row['role'];

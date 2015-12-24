@@ -42,14 +42,33 @@
 <div ID="MainArea">
     <div class="Container page">
         <h1> <?php echo "Admin: " . $_SESSION['username']; ?> </h1>
-        <form  action ="Adconf.php" method = "get">
-            <select name="search">
-                <option value="Pending">Pendings</option>
-                <option value="Reader">Readers</option>
-                <option value="Author">Authors</option>
-            </select>
-            <input type="submit" value="search">
-        </form>
+        <p>
+            <a href="admin.php?user=delete">Users_level</a>
+            <a href="">Users_delete</a>
+        </p>
+        <p>
+            <?php
+                if(isset($_GET['user']) && !empty($_GET['user'])){
+            ?>
+            <table>
+                <tr><td width="150px">Users</td><td>Options</td></tr>
+            <?php
+                $list_query = mysqli_query("SELECT username FROM users");
+                while($run_list = mysqli_fetch_array($list_query)){
+                    $u_username = $run_list['username'];
+
+            ?>
+            <tr><td><?php echo $u_username; ?></td><td>
+                    <?php
+                    if($u_username == 'delete') {
+                        echo "<a href=''>Delete</a>";
+                    }
+                    }
+                    ?>
+                </td></tr>
+
+            </table>
+        </p>
 
 
     </div>

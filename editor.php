@@ -93,11 +93,11 @@
 
     if(isset($_POST['submit'])){
 
-        echo $post_title = $_POST['title'];
-        echo $post_date = date('d-m-y');
-        echo $post_Author = $_SESSION['username'];
-        echo $post_hashtags = $_POST['hashtags'];
-        echo $post_content = $_POST['content'];
-        echo $post_image = $_POST['image']['name'];
+         $post_title = $_POST['title'];
+         $post_date = date('d-m-y');
+         $post_Author = $_SESSION['username'];
+         $post_hashtags = $_POST['hashtags'];
+         $post_content = $_POST['content'];
+         $post_image = $_FILES['image']['name'];
     }
 ?>

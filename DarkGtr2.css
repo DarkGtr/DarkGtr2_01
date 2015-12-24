@@ -65,7 +65,8 @@ body{
 .page {
     background-color: white;
     padding: 20px;
-    height: 870px;
+    height: 900px;
+    opacity: 0.5;
 }
 
 #LogoLink {

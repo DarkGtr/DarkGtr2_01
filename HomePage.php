@@ -3,9 +3,9 @@
         if (!(isset($_SESSION['username']) && $_SESSION['username'] != '')) {
             echo "<script>alert('Please Login'); location.href='Login.php';</script>";
         }
-    if (!isset($_POST['Login'])) {
-        echo "<script>alert('Please Login'); location.href='Login.php';</script>";
-    }
+    //if (!isset($_POST['Login'])) {
+     //   echo "<script>alert('Please Login'); location.href='Login.php';</script>";
+  //  }
 ?>
 <!DOCTYPE html>
 <html lang="en">

@@ -43,7 +43,7 @@
     <div class="Container page">
         <h1> <?php echo "Admin: " . $_SESSION['username']; ?> </h1>
         <p>
-            <a href="admin.php?user=level">Users_level</a> |
+            <a href="admin.php?level=role">Users_level</a> |
             <a href="admin.php?user=delete">Users_delete</a>
         </p>
         <p>
@@ -66,6 +66,40 @@
                     <td><?php echo $u_username; ?></td>
                     <td><a href="Adconf.php?del=<?php echo $u_username;?>">Delete</a></td>
                 </tr> <?php }} ?>
+            </table>
+        </p>
+        <p>
+            <?php
+                if(isset($_GET['level']) && !empty($_GET['level'])){
+            ?>
+            <table>
+                <tr>
+                    <th width="150px">Username</th>
+                    <th width="150px">Role</th>
+                    <th>Change Role To</th>
+                </tr>
+                <tr>
+                    <?php
+                        $list_query2 = "SELECT * FROM users";
+                        $run_query2 = $db->query($list_query2);
+                        while($row2 = $run_query2->fetch_array()) {
+                            $u_username2 = $row2['username'];
+                            $u_role2 = $row2['role'];
+                    ?>
+                    <td><?php echo $u_username2; ?></td>
+                    <td><?php echo $u_role2; ?></td>
+                    <td>
+                        <form action="Adconf.php?" method="get">
+                            <select name="update">
+                                <option value="Pending">Pending</option>
+                                <option value="Reader">Reader</option>
+                                <option value="Author">Author</option>
+                                <option value="Admin">Admin</option>
+                            </select>
+                        </form>
+                    </td>
+                </tr> <?php }} ?>
+
             </table>
         </p>
 

@@ -137,6 +137,6 @@ body{
     background-color: #00A000;
 }
 
-table {
+table th,tr,td {
     margin-left: 20px;
 }

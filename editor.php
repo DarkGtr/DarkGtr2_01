@@ -14,7 +14,7 @@
     $run_role = $db->query($role);
     WHILE ($row = $run_role->fetch_array()) {
         $row['role'];
-        if ($row['role'] != 'Admin') {
+        if ($row['role'] != 'Admin' OR 'Author') {
             die ("error");
         }}
 ?>

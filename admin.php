@@ -50,20 +50,18 @@
             <?php
                 if(isset($_GET['delete']) && !empty($_GET['delete'])){
             ?>
-            <table>
-                <tr><td width="150px">Users</td><td>Delete User</td></tr>
             <?php
-                $list_query = "SELECT * FROM users";
-                $run_query = $db->query($list_query);
-                while($row = $run_query->fetch_array()){
-                    $u_username = $row['username'];
-                    $u_role = $row['role'];
-
+            $list_query = "SELECT * FROM users";
+            $run_query = $db->query($list_query);
+            while($row = $run_query->fetch_array()){
+            $u_username = $row['username'];
+            $u_role = $row['role'];
             ?>
-            <tr><td><?php echo $u_username; ?></td><td>
-                    <a href="Adconf.php?del=<?php echo $u_username; }}?>">Delete</a>
-            </td></tr>
-
+            <table>
+                <tr>
+                    <td width="150px"><?php echo $u_username?></td>
+                    <td><a href="Adconf.php?del=<?php echo $u_username; ?>">Delete</a></td>
+                </tr>
             </table>
         </p>
 

@@ -5,9 +5,9 @@
     require('config.php');
 
     $delete_id = $_GET['del'];
-    $del_query = "DELETE from users WHERE username='$delete_id'";
+    $query = "DELETE from users WHERE username='$delete_id'";
 
-    if(mysql_query($del_query)) {
+    if(mysqli_query($query)) {
         echo "<script>window.open('view_admin.php?deleted=user has been deleted!!!','_self')
     </script>";
     }

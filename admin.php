@@ -63,7 +63,7 @@
                     if($u_username == 'delete') {
                         echo "<a href=''>Delete</a>";
                     }
-                    }
+                    }}
                     ?>
                 </td></tr>
 

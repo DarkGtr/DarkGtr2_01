@@ -22,7 +22,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>index</title>
+    <title>Admin Panel</title>
     <link rel="stylesheet" type="text/css" href="DarkGtr2.css">
     <link rel="shortcut icon" href="#">
 </head>
@@ -42,7 +42,16 @@
 <div ID="MainArea">
     <div class="Container page">
         <h1> <?php echo "Admin: " . $_SESSION['username']; ?> </h1>
-        <h1> Admin verify  </h1>
+        <form  action ="Adconf.php" method = "get">
+            <select name="search">
+                <option value="Pending">Pendings</option>
+                <option value="Reader">Readers</option>
+                <option value="Author">Authors</option>
+            </select>
+            <input type="submit" value="search">
+        </form>
+
+
     </div>
 </div>
 <div ID="footer">

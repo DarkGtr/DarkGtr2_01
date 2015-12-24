@@ -57,6 +57,10 @@
                     <td><input type="text" name="title"></td>
                 </tr>
                 <tr>
+                    <td>Post Country:</td>
+                    <td><input type="text" name="country"></td>
+                </tr>
+                <tr>
                     <td>Post Author:</td>
                     <td><?php echo $_SESSION['username']; ?> </td>
                 </tr>
@@ -94,11 +98,12 @@
     if(isset($_POST['submit'])){
 
          $post_title = $_POST['title'];
+         $post_country = $_POST['country'];
          $post_date = date('d-m-y');
          $post_Author = $_SESSION['username'];
          $post_hashtags = $_POST['hashtags'];
          $post_content = $_POST['content'];
-         $post_image = $_FILES['image']['name'];
+         $post_image = $_FILES['image'];
 
         if ($post_title==''){
             echo "<script>alert('Please enter a title')</script>";
@@ -106,5 +111,14 @@
             echo  "<script>alert('Please enter content')</script>";
         } exit();
 
-    }
+    } else {
+        $insert_query1 = "INSERT INTO gallery (url) VALUES ('$post_image')"
+        $insert_query2 = "INSERT INTO post (username, p_date, p_title, tap_info, p_country, p_tag)
+                                    VALUES ('$post_Author', '$post_date', '$post_title', '$post_content',
+                                            '$post_country', '$post_hashtags')";
+        if (mysqli_query($insert_query2)){
+            echo "<script>alert('You have uploaded the trip successfully')</script>";
+        }
 ?>
+    }
+

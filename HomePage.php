@@ -37,7 +37,7 @@
         error_reporting(E_ALL);
          require('config.php');
 
-         if (isset($_POST['Login'])) {
+        /* if (isset($_POST['Login'])) {
              $username = mysqli_real_escape_string($db, $_POST['username']);
              $password = mysqli_real_escape_string($db, $_POST['password']);
              $password = md5($password);
@@ -47,11 +47,12 @@
              $check_user = mysqli_num_rows($run_user);
              if ($check_user == 1) {
                  $_SESSION['username'] = $username;
-                 echo 'Welcome ' . $_SESSION['username'] . "<br>";
+
              } else {
                  echo "<script>alert('Username or Password is incorrect'); location.href='Login.php';</script>";
-             }
-             $role = "SELECT * FROM users WHERE username ='$username'";
+             }*/
+             echo 'Welcome ' . $_SESSION['username'] . "<br>";
+             $role = "SELECT * FROM users WHERE username ='{$_SESSION['username']}'";
              $run_role = $db->query($role);
              WHILE ($row = $run_role->fetch_array()) {
                  echo "Role: " . $row['role'] . "<br>";
@@ -69,7 +70,7 @@
                      "You can only read trips";
              }
              }
-         }
+
             ?>
         </h1>
         </div>

@@ -47,6 +47,40 @@
 <div ID="MainArea">
     <div class="Container page">
         <h1> <?php echo "Editor: " . $_SESSION['username']; ?> </h1>
+        <form method="post" action="editor.php" enctype="multipart/form-data">
+            <table width="600px" align="center" border="10px">
+                <tr>
+                    <td align="center"><h1>Insert New Posts Here</h1></td>
+                </tr>
+                <tr>
+                    <td>Post Title:</td>
+                    <td><input type="text" name="title"></td>
+                </tr>
+                <tr>
+                    <td>Post Author:</td>
+                    <td><input type="text" name="Author"></td>
+                </tr>
+                <tr>
+                    <td>Post Country:</td>
+                    <td><input type="text" name="country"></td>
+                </tr>
+                <tr>
+                    <td>Post Hashtags:</td>
+                    <td><input type="text" name="hashtags"></td>
+                </tr>
+                <tr>
+                    <td>Post Content:</td>
+                    <td><textarea name="content" cols="20" rows="20"</textarea></td>
+                </tr>
+                <tr>
+                    <td>Post Image:</td>
+                    <td><input type="text" name="image"></td>
+                </tr>
+                <tr>
+                    <td><input type="submit" name="submit" value="Publish"</td>
+                </tr>
+            </table>
+        </form>
     </div>
 </div>
 <div ID="footer">

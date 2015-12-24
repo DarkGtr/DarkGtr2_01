@@ -72,10 +72,10 @@
             <?php
                 if(isset($_GET['level']) && !empty($_GET['level'])){
             ?>
-            <table>
+            <table width="100px">
                 <tr>
-                    <th width="150px; text-align: left;">Username</th>
-                    <th width="150px">Role</th>
+                    <th>Username</th>
+                    <th>Role</th>
                     <th>Change Role To</th>
                 </tr>
                 <tr>

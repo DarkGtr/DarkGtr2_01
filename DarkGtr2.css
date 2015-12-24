@@ -136,3 +136,7 @@ body{
 #WelcomeCode a:hover{
     background-color: #00A000;
 }
+
+table {
+    margin-left: 20px;
+}

@@ -58,7 +58,7 @@
                 </tr>
                 <tr>
                     <td>Post Author:</td>
-                    <td><input type="text" name="Author"></td>
+                    <td><?php echo $_Session['username']?> </td>
                 </tr>
                 <tr>
                     <td>Post Country:</td>

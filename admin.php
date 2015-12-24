@@ -42,17 +42,17 @@
 <div ID="MainArea">
     <div class="Container page">
         <h1> <?php echo "Admin: " . $_SESSION['username']; ?> </h1>
-        <p>
+        <h2>
             <a href="admin.php?level=role">Users_level</a> |
             <a href="admin.php?user=delete">Users_delete</a>
-        </p>
-        <p>
+        </h2>
+        <h3>
             <?php
                 if(isset($_GET['user']) && !empty($_GET['user'])){
             ?>
             <table>
                 <tr>
-                    <th width="150px">Username</th>
+                    <th>Username</th>
                     <th>Delete User</th>
                 </tr>
                 <tr>
@@ -67,12 +67,12 @@
                     <td><a href="Adconf.php?del=<?php echo $u_username;?>">Delete</a></td>
                 </tr> <?php }} ?>
             </table>
-        </p>
-        <p>
+        </h3>
+        <h3>
             <?php
                 if(isset($_GET['level']) && !empty($_GET['level'])){
             ?>
-            <table width="100px">
+            <table>
                 <tr>
                     <th>Username</th>
                     <th>Role</th>
@@ -101,7 +101,7 @@
                 </tr> <?php }} ?>
 
             </table>
-        </p>
+        </h3>
 
 
     </div>

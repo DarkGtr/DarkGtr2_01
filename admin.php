@@ -1,6 +1,6 @@
 <?php
     session_start();
-    if (!(isset($_SESSION['login']) && $_SESSION['login'] != '')) {
+    if (!(isset($_SESSION['username']) && $_SESSION['username'] != '')) {
         echo "<script>alert('Please Login'); location.href='Login.php';</script>";
     } else {
         $_SESSION['username'];
@@ -29,6 +29,7 @@
 </div>
 <div ID="MainArea">
     <div class="Container page">
+        <h1> <?php echo $_SESSION['username']; ?> </h1>
         <h1> Admin verify </h1>
     </div>
 </div>

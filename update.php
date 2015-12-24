@@ -5,7 +5,8 @@
     require('config.php');
 
     $update_id = $_GET['update'];
-    $up_query = "UPDATE 'role' SET 'updateRole' WHERE 'username'='$update_id'";
+    $update_role = $_GET['updateRole'];
+    $up_query = "UPDATE 'role' SET '$update_id' WHERE 'username'='$update_role'";
     $run_query2 = $db->query($up_query);
 
     if ($run_query2) {

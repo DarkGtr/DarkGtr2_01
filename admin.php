@@ -103,7 +103,7 @@
                                 <option value="Reader">Reader</option>
                                 <option value="Author">Author</option>
                                 <option value="Admin">Admin</option>
-                            <input type="submit" value="Update"/>
+                            <input name="update" type="submit" value="Update"/>
                             </select>
                         </form>
                     </td>

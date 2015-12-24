@@ -8,7 +8,7 @@
     $query = "DELETE from users WHERE username='$delete_id'";
 
     if(mysqli_query($query)) {
-        echo "<script>window.open('view_admin.php?deleted=user has been deleted!!!','_self')
+        echo "<script>window.open('admin.php?deleted=user has been deleted!!!','_self')
     </script>";
     }
 

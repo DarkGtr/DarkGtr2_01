@@ -110,7 +110,7 @@
                                             '$post_country', '$post_hashtags')";
         $run_user = mysqli_query($db, $insert_query);
 
-     elseif ($run_user) {
+     if ($run_user) {
             echo "<script>alert('You have uploaded the trip successfully')</script>";
         } elseif ($post_title=='') {
             echo "<script>alert('Please enter a title')</script>";

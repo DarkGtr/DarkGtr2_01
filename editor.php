@@ -105,22 +105,18 @@
          $post_content = $_POST['content'];
          $post_image = $_FILES['image'];
 
-        if ($post_title==''){
-            echo "<script>alert('Please enter a title')</script>";
-        } elseif($post_content==''){
-            echo  "<script>alert('Please enter content')</script>";
-            exit();
-        }
-
-    } else {
         $insert_query1 = "INSERT INTO gallery (url) VALUES ('$post_image')";
         $insert_query2 = "INSERT INTO post (username, p_date, p_title, tap_info, p_country, p_tag)
                                     VALUES ('$post_Author', '$post_date', '$post_title', '$post_content',
                                             '$post_country', '$post_hashtags')";
         $run_user = mysqli_query($db, $insert_query2);
-        if ($run_user){
+
+        if ($run_user) {
             echo "<script>alert('You have uploaded the trip successfully')</script>";
+        } elseif ($post_title=='') {
+            echo "<script>alert('Please enter a title')</script>";
+        } elseif($post_content==''){
+            echo  "<script>alert('Please enter content')</script>";
+            exit();
         }}
 ?>
-
-

@@ -1,18 +1,17 @@
 <?php
     session_start();
+        $role = "SELECT * FROM users WHERE username ='$username'";
+        $run_role = $db->query($role);
+        WHILE ($row = $run_role->fetch_array())
+        $row['role'];
     if (!(isset($_SESSION['username']) && $_SESSION['username'] != '')) {
         echo "<script>alert('Please Login'); location.href='Login.php';</script>";
+    } elseif ($row['role'] != 'Admin') {
+        die('error');
     } else {
         $_SESSION['username'];
     }
-    $role = "SELECT * FROM users WHERE username ='$username'";
-    $run_role = $db->query($role);
-    WHILE ($row = $run_role->fetch_array()) {
-    echo "Role: " . $row['role'] . "<br>";
-    if ($row['role'] != 'Admin') {
-        die('error');
-     }
-    }
+
 ?>
 <!DOCTYPE html>
 <html lang="en">

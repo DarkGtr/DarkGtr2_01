@@ -7,7 +7,7 @@
         $run_role = $db->query($role);
         WHILE ($row = $run_role->fetch_array()) {
             $row['role'];}
-        die('error');
+        die("error");
     } else {
         $_SESSION['username'];
     }

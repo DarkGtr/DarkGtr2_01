@@ -95,7 +95,7 @@
 
         $post_title = $_POST['title'];
         $post_country = $_POST['country'];
-        $post_date = date('d-m-y');
+        $post_date = date('m.d.y');
         $post_Author = $_SESSION['username'];
         $post_hashtags = $_POST['hashtags'];
         $post_content = $_POST['content'];

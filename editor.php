@@ -4,6 +4,20 @@
         echo "<script>alert('Please Login'); location.href='Login.php';</script>";
     }
 ?>
+    <?php
+    ini_set('display_errors', 1);
+    ini_set('display_startup_errors', 1);
+    error_reporting(E_ALL);
+    require('config.php');
+
+    $role = "SELECT * FROM users WHERE username ='{$_SESSION['username']}'";
+    $run_role = $db->query($role);
+    WHILE ($row = $run_role->fetch_array()) {
+        $row['role'];
+        if ($row['role'] != 'Admin') {
+            die ("error");
+        }}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -27,7 +41,7 @@
 </div>
 <div ID="MainArea">
     <div class="Container page">
-        <h1> Editing <?php echo $_SESSION['username']; ?> </h1>
+        <h1> <?php echo "Editor: " . $_SESSION['username']; ?> </h1>
     </div>
 </div>
 <div ID="footer">

@@ -77,7 +77,7 @@
                     <td><input type="text" name="image"></td>
                 </tr>
                 <tr>
-                    <td><input type="submit" name="submit" value="Publish"</td>
+                    <td><input type="submit" name="submit" value="Publish"></td>
                 </tr>
             </table>
         </form>

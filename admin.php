@@ -61,7 +61,7 @@
                 <tr>
                     <td width="150px"><?php echo $u_username?></td>
                     <td><a href="Adconf.php?del=<?php echo $u_username; ?>">Delete</a></td>
-                </tr>
+                </tr> <?php }} ?>
             </table>
         </p>
 

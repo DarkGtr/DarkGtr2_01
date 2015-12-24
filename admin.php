@@ -95,7 +95,7 @@
                         $run_query = $db->query($up_query);
 
                         if ($run_query) {
-                        echo "<script>alert('Updated!'); location.href='admin.php?level=role';</script>";
+                        echo "<script>alert('Updated!'); location.href='admin.php?level=update';</script>";
                         } ?>
                         <form action="admin.php" method="get">
                             <select name="update">

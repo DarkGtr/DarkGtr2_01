@@ -4,7 +4,7 @@
     error_reporting(E_ALL);
     require('config.php');
 
-    if(isset($_GET['submit'])) {
+
 
         $update_id = $_GET['up'];
         $updateR = $_GET['submit'];
@@ -17,7 +17,5 @@
         } else {
             echo "<script>alert('Something went wrong!'); location.href='admin.php?level=update';</script>";
         }
-    }
-
 
 ?>

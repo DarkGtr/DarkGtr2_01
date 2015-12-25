@@ -134,11 +134,11 @@ table th,tr,td {
     padding-right: 58px;
 
 }
-#authors a {
+#authors  {
     text-decoration: none;
     padding-top: 2px;
 }
 
-#authors a:hover {
+#authors :hover {
     background-color: #00A000;
 }

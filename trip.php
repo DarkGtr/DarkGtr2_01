@@ -46,6 +46,7 @@ WHILE ($row = $run_role->fetch_array()) {
                 <?php if($_SESSION['username'] == true) { ?>
                 <a href="HomePage.php"><li>Home</li></a><?php }
                 else { ?> <a href="index.html"><li>Home</li></a><?php } ?>
+                <a href="trips.php"><li>Trips</li></a>
             </ul>
         </div>
     </div>

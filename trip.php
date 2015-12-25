@@ -119,7 +119,7 @@ WHILE ($row = $run_role->fetch_array()) {
                     </tr>
                 </table>
             </form>
-        </div> <?php } else {echo "Please login to add comment";} ?>
+        </div> <?php } else {echo "Please login to add a comment";} ?>
     </div>
 </div>
 <div ID="footer">

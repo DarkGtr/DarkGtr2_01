@@ -60,8 +60,7 @@
         $list_query = "SELECT * FROM users WHERE role='Author'";
         $run_query = $db->query($list_query);
         while($row = $run_query->fetch_array()){
-            $u_username = $row['username'];
-            echo $u_username;
+            $u_username = $row['username'];echo $u_username;
         ?>"><h2><?php echo "<br>" . $u_username;} ?></h2></a>
 
 

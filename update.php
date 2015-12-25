@@ -23,7 +23,6 @@
     }
 }*/
 
-if (isset($_POST['submit'])) {
     $user = $_POST['user'];
     $role = $_POST['up'];
 
@@ -35,6 +34,6 @@ if (isset($_POST['submit'])) {
     } else {
         echo "<script>alert('Something went wrong!'); location.href='admin.php?level=update';</script>";
     }
-}
+
 
 ?>

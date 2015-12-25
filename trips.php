@@ -1,7 +1,7 @@
 <?php
 session_start();
 if (!(isset($_SESSION['username']) && $_SESSION['username'] != '')) {
-    echo "<script>alert('Please Login'); location.href='Login.php';</script>";
+
 }
 require('config.php');
 ?>
@@ -42,8 +42,8 @@ WHILE ($row = $run_role->fetch_array()) {
             <a href="index.html" ID="LogoLink">Logo</a>
         </div>
         <div ID="NavArea">
-            <ul ID="Nav">
-                <a href="Logout.php"><li>Logout</li></a>
+            <ul ID="Nav"><?php if($_SESSION['username'] == true) { ?>
+                <a href="Logout.php"><li>Logout</li></a><?php }?>
                 <a href="HomePage.php"><li>Home</li></a>
             </ul>
         </div>

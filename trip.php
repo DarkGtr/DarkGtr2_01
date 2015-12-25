@@ -75,7 +75,7 @@ WHILE ($row = $run_role->fetch_array()) {
 
         </div>
         <div ID="Comment">
-            <form action="comment.php" method="get">
+            <form action="comment.php" method="post">
                 <table>
 
                     <tr>

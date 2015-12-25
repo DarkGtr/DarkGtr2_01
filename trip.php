@@ -102,9 +102,7 @@ WHILE ($row = $run_role->fetch_array()) {
                     }}
                     ?>
                     <tr>
-                        <td>Name: <?php if($_SESSION['username']) {
-                                echo $_SESSION['username'];
-                            }?></td>
+                        <td>Name: <?php echo $_SESSION['username'];?></td>
                     </tr>
                     <tr>
                         <td colspan="2">Comment: </td>

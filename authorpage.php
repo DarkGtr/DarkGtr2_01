@@ -53,7 +53,7 @@ $author = $_GET['author'];
 <div ID="MainArea">
     <div class="Container page">
         <h1>Author name: <?php echo $author; ?></h1><hr>
-        <h2>  Author's posts:<br>
+        <h2>  <strong>Author's posts:</strong><br>
         <?php
             $query = "SELECT * FROM post WHERE username='$author'";
             $run_query = $db->query($query);

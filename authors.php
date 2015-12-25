@@ -49,7 +49,7 @@
 </div>
 <div ID="MainArea">
     <div class="Container page">
-        <h1> Authors: </h1><br><hr>
+        <h1> <strong>Authors: </strong></h1><br><hr>
         <a href="authorPage.php?Author="
         <?php
         ini_set('display_errors', 1);

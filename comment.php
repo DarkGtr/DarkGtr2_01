@@ -18,7 +18,7 @@ require('config.php');
 
 
     $trip_query = "SELECT * FROM post WHERE p_title='$post_title'";
-    $run_query = $db->query($query);
+    $run_query = $db->query($trip_query);
     while($row = $run_query->fetch_array()) {
         $p_id = $row['post_id'];
 

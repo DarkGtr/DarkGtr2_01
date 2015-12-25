@@ -23,6 +23,7 @@
 <div ID="MainArea">
     <div class="Container page">
         <a href="authors.php?"
+           <h1>
         <?php
         ini_set('display_errors', 1);
         ini_set('display_startup_errors', 1);
@@ -37,7 +38,7 @@
 
             echo $u_username;} ?>
 
-        ?>
+        </h1>
     </div>
 </div>
 <div ID="footer">

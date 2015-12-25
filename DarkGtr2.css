@@ -143,3 +143,13 @@ table th,tr,td {
 #authors:hover {
     color: #00A000;
 }
+
+#posts  {
+    text-decoration: none;
+    color: black;
+
+}
+
+#posts:hover {
+    color: #00A000;
+}

@@ -6,7 +6,7 @@
 
 
 
-        $update_id = $_POST['up'];
+        $update_id = $_GET['up'];
         $updateR = $_GET['submit'];
 
         $up_query = "UPDATE 'users' SET 'role'='$update_id' WHERE 'username'='$updateR'";

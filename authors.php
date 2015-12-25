@@ -49,8 +49,8 @@
 </div>
 <div ID="MainArea">
     <div class="Container page">
-        <a href="authors.php?"
-           <h1> Authors: </h1><br><hr>
+        <h1> Authors: </h1><br><hr>
+        <a href="authorPage.php?Author="
         <?php
         ini_set('display_errors', 1);
         ini_set('display_startup_errors', 1);
@@ -62,7 +62,7 @@
         while($row = $run_query->fetch_array()){
             $u_username = $row['username'];
 
-            echo "<br>" . "<h2>$u_username</h2>";} ?>
+            echo "<br>" . "<h2>$u_username</h2>";} ?>></a>
 
 
     </div>

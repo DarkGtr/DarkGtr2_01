@@ -51,24 +51,17 @@ require('config.php');
                 $result = $db->query($search);
                 WHILE ($row = $result->fetch_array()){
                     $post_title = $row['p_title'];
-                    ?> <a ID="posts" href="trip.php?trip=<?php echo $post_title; ?>"><?php echo $post_title ."<br>";?></a>
-                <?php $result->close();
-                $db->close();
-           } }?>
+                    ?> <a ID="posts" href="trip.php?trip=<?php echo $post_title; ?>"><?php echo $post_title ."<br>";}?></a>
+
             <?php
-            if($_POST['searchAuthor']) {
+            } elseif($_POST['searchAuthor']) {
                 $search = "SELECT * FROM users WHERE role='{$_POST['searchAuthor']}'";
                 $result = $db->query($search);
                 WHILE ($row = $result->fetch_array())
                     $username = $row['username'];?>
             <a ID="authors" href="authorpage.php?author=<?php echo $username; ?>
-       "><?php echo $username  . "<br>";?></a>
-                <?php $result->close();
-                $db->close();
-            }
+       "><?php echo $username  . "<br>"; }?></a>
 
-
-            ?>
         </div>
     </div>
 </div>

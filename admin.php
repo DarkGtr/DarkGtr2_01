@@ -88,20 +88,19 @@
                             $u_role = $row['role'];
                     ?>
                     <td>
-                        <form action="update.php" method="post">
-                            <label for="user"><?php echo $u_username; ?></label>
-                            <input type="radio" name="user" value="<?php echo $u_username; ?>">
-                        </form>
                     </td>
                     <td><?php echo $u_role; ?></td>
                     <td>
                         <form action="update.php" method="post">
-                            <select name="up">
+                            <label for="user"><?php echo $u_username; ?></label>
+                            <input type="radio" name="user" value="<?php echo $u_username; ?>">
+                                <label for="up"></label>
+                                    <select name="up">
                                 <option value="Pending">Pending</option>
                                 <option value="Reader">Reader</option>
                                 <option value="Author">Author</option>
                                 <option value="Admin">Admin</option>
-                            <input name="submit" type="submit" value="submit"/>
+                            <input name="submit" type="submit" value="Modify"/>
                             </select>
                         </form>
                     </td>

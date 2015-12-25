@@ -9,7 +9,7 @@ require('config.php');
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Trips</title>
+    <title>SearchPage</title>
     <link rel="stylesheet" type="text/css" href="DarkGtr2.css">
     <link rel="shortcut icon" href="#">
     <link rel="icon" type="image/png" href="http://genfavicon.com/inc/to_ico.php" sizes="32x32" />
@@ -22,7 +22,7 @@ require('config.php');
         </div>
         <div ID="NavArea">
             <ul ID="Nav"><?php if($_SESSION['username'] == true) { ?>
-                <a href="Logout.php"><li>Logout</li></a><?php }?>
+                    <a href="Logout.php"><li>Logout</li></a><?php }?>
                 <?php if($_SESSION['username'] == true) { ?>
                     <a href="HomePage.php"><li>Home</li></a><?php }
                 else { ?> <a href="index.html"><li>Home</li></a><?php } ?>
@@ -33,20 +33,16 @@ require('config.php');
 <div ID="MainArea">
     <div class="Container page">
         <h1> <strong>Trips: </strong></h1><hr>
-        <h2>
-            <?php
-            ini_set('display_errors', 1);
-            ini_set('display_startup_errors', 1);
-            error_reporting(E_ALL);
-
-
-            $list_query = "SELECT * FROM post";
-            $run_query = $db->query($list_query);
-            while($row = $run_query->fetch_array()){
-            $post_title = $row['p_title'];
-            $post_Author = $row['username'];
-            ?>
-            <a ID="posts" href="trip.php?trip=<?php echo $post_title; ?>"><?php echo $post_title  . " By ". $post_Author ."<br>";}?></a></h2>
+        <h2 style="text-align: center">
+            <form action="search.php" method="post">
+                <input type="text" name="searchkey" placeholder="Search for keywords">
+                <input type="submit" value=">>"/>
+                </form>
+            <form action="search.php" method="post">
+                <input type="text" name="searchAuthor" placeholder="Search for Authors">
+                <input type="submit" value=">>"/>
+            </form>
+            </h2>
     </div>
 </div>
 <div ID="footer">

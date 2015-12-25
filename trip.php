@@ -4,23 +4,6 @@ if (!(isset($_SESSION['username']) && $_SESSION['username'] != '')) {
 }
 require('config.php');
 ?>
-<?php
-
-$role = "SELECT * FROM users WHERE username ='{$_SESSION['username']}'";
-$run_role = $db->query($role);
-WHILE ($row = $run_role->fetch_array()) {
-    $row['role'];
-    if ($row['role'] == 'Admin') {
-
-    } elseif ($row['role'] == 'Author'){
-
-    } elseif ($row['role'] == 'Reader') {
-
-    } else {
-        die ("error");
-    }
-}
-?>
 <!DOCTYPE html>
 <html lang="en">
 <head>

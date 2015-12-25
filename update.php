@@ -6,11 +6,10 @@
 
 
 
-        $update_id = $_GET['up'];
+        $update_id = $_POST['up'];
         $updateR = $_GET['submit'];
 
         $up_query = "UPDATE users SET 'role'='$update_id' WHERE 'username'='$updateR'";
-            echo $update_id . $updateR;
 
         if (mysqli_query($db, $up_query)) {
             echo "<script>alert('Updated!'); location.href='admin.php?level=update';</script>";

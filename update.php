@@ -5,7 +5,7 @@
     require('config.php');
 
 
-if ('POST' == $_SERVER['REQUEST_METHOD'] and
+/*if ('POST' == $_SERVER['REQUEST_METHOD'] and
     isset($_POST['user']) and
     isset($_POST['up'])) {
 
@@ -20,5 +20,21 @@ if ('POST' == $_SERVER['REQUEST_METHOD'] and
     } else {
         echo "<script>alert('Something went wrong!'); location.href='admin.php?level=update';</script>";
     }
+}*/
+
+require('config.php');
+if (isset($_POST['submit'])) {
+    $user= $_POST['user'];
+    $role= $_POST['up'];
+
+    $up_query = "UPDATE 'users' SET 'role'='$role' WHERE 'username'='$user'";
+
+
+    if (mysqli_query($db, $up_query)) {
+        echo "<script>alert('Updated!'); location.href='admin.php?level=update';</script>";
+    } else {
+        echo "<script>alert('Something went wrong!'); location.href='admin.php?level=update';</script>";
+    }
 }
+
 ?>

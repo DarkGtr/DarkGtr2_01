@@ -94,11 +94,10 @@ WHILE ($row = $run_role->fetch_array()) {
                             if($comment) {
                                 $query = "INSERT INTO comments (username, comment, p_id)
                             VALUES ('{$_SESSION['username']}', '$comment'), '$p_id'";
-                                if (!mysqli_query($db, $query)) {
-                                    echo "<script>alert('Please enter a comment');</script>";
-                                }
-
-                                echo "You've just commented";
+                                if (mysqli_query($db, $query)) {
+                                    echo "<script>alert('You have just commented!');</script>";
+                                } elseif ($comment = '') {
+                                   echo "<script>alert('Enter a comment');</script>";
                             }
 
                         }

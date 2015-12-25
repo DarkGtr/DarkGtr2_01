@@ -7,6 +7,9 @@ require('config.php');
 ?>
 
 <?php
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
     $comment = $_POST['comment'];
     $submit = $_POST['submit'];
     $post_title = $_GET['trip'];
@@ -18,7 +21,7 @@ require('config.php');
 
 
         if(isset($submit)) {
-            $query = "INSERT INTO comments (post_id, username, comment)
+            $query = "INSERT INTO 'comments' (post_id, username, comment)
                                 VALUES ('$p_id', '{$_SESSION['username']}'), '$comment'";
             if (mysqli_query($db, $query)) {
                 echo "<script>alert('You have just commented!');location.href='trip.php?trip='$post_title'</script>";

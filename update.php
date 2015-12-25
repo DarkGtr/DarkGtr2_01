@@ -36,9 +36,10 @@
             echo "<script>alert('Something went wrong!'); location.href='admin.php?level=update';</script>";
         }
     }*/
-    $pending = $_GET['pend'];
 
-    if ($pending) {
+
+    if ($_GET['pend']) {
+        $pending = $_GET['pend'];
         $up_query = "UPDATE 'users' SET 'role'='Pending' WHERE 'username'='$pending'";
         $run_user = mysqli_query($db, $up_query);
         if ($run_user) {

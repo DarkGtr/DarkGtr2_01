@@ -23,7 +23,7 @@ require('config.php');
         $p_id = $row['post_id'];
 
 
-        if(isset($submit)) {
+        if(isset($comment)) {
             $query = "INSERT INTO comments (post_id, username, comment)
                                 VALUES ('$p_id', '$username'), '$comment'";
             if (mysqli_query($db, $query)) {

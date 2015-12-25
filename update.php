@@ -45,8 +45,7 @@
             echo "<script>alert('Updated!'); location.href='admin.php?level=update';</script>";
         } else  {
             echo "<script>alert('Something went wrong!'); location.href='admin.php?level=update';</script>";
-        }$run_user->close();
-        $db->close();}
+        }}
 ?>
 <?php
 $read = $_GET['read'];
@@ -57,8 +56,7 @@ if ($read) {
         echo "<script>alert('Updated!'); location.href='admin.php?level=update';</script>";
     } else  {
         echo "<script>alert('Something went wrong!'); location.href='admin.php?level=update';</script>";
-    }$run_user->close();
-    $db->close();}
+    }}
 ?>
 <?php
 $auth = $_GET['auth'];
@@ -69,8 +67,7 @@ if ($auth) {
         echo "<script>alert('Updated!'); location.href='admin.php?level=update';</script>";
     } else  {
         echo "<script>alert('Something went wrong!'); location.href='admin.php?level=update';</script>";
-    }$run_user->close();
-    $db->close();}
+    }}
 ?>
 <?php
 
@@ -82,7 +79,6 @@ if($admin) {
         echo "<script>alert('Updated!'); location.href='admin.php?level=update';</script>";
     } else  {
         echo "<script>alert('Something went wrong!'); location.href='admin.php?level=update';</script>";
-    }$run_user->close();
-    $db->close();}
+    }}
 
 ?>

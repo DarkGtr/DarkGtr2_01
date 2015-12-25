@@ -23,8 +23,7 @@ WHILE ($row = $run_role->fetch_array()) {
     } else {
         die ("error");
     }
-} $run_role->close();
-$db->close();
+}
 $author = $_GET['author'];
 ?>
 <!DOCTYPE html>
@@ -60,8 +59,7 @@ $author = $_GET['author'];
             while($row = $run_query->fetch_array()){
             $post_title = $row['p_title'];
         ?>
-        <a ID="posts" href="trip.php?trip=<?php echo $post_title; ?>"><?php echo $post_title  . "<br>";} $run_query->close();
-            $db->close();?></a></h2>
+        <a ID="posts" href="trip.php?trip=<?php echo $post_title; ?>"><?php echo $post_title  . "<br>";}?></a></h2>
     </div>
 </div>
 <div ID="footer">

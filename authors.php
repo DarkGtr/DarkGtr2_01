@@ -23,8 +23,7 @@
         } else {
             die ("error");
         }
-    } $run_role->close();
-$db->close();
+    }
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -65,8 +64,7 @@ $db->close();
         $u_username = $row['username'];
         ?>
         <a ID="authors" href="authorpage.php?author=<?php echo $u_username; ?>
-       "><?php echo $u_username  . "<br>";} $run_query->close();
-            $db->close();?></a></h2>
+       "><?php echo $u_username  . "<br>";}?></a></h2>
     </div>
 </div>
 <div ID="footer">

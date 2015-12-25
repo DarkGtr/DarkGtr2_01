@@ -38,33 +38,33 @@ require('config.php');
                 <input type="text" name="searchkey" placeholder="Search for keywords">
                 <input type="submit" value=">>"/>
                 </form>
-            <form action="search.php" method="post">
+            <form action="searchpage.php" method="post">
                 <input type="text" name="searchAuthor" placeholder="Search for Authors">
                 <input type="submit" value=">>"/>
             </form>
             </h2>
-    </div>
-    <div>
-        <?php
+        <div>
+            <?php
 
-        if(isset($_POST['searchkey'])){
-            $search = "SELECT * FROM post WHERE p_tag='{$_POST['searchkey']}'";
-            $result = $db->query($search);
-            WHILE ($row = $result->fetch_array())
-                echo $row['p_tag'];
-            $result->close();
-            $db->close();
-        } elseif($_POST['searchAuthor']) {
-            $search = "SELECT * FROM users WHERE role='{$_POST['searchAuthor']}'";
-            $result = $db->query($search);
-            WHILE ($row = $result->fetch_array())
-                echo $row['role'];
-            $result->close();
-            $db->close();
-        }
+            if(isset($_POST['searchkey'])){
+                $search = "SELECT * FROM post WHERE p_tag='{$_POST['searchkey']}'";
+                $result = $db->query($search);
+                WHILE ($row = $result->fetch_array())
+                    echo $row['p_tag'];
+                $result->close();
+                $db->close();
+            } elseif($_POST['searchAuthor']) {
+                $search = "SELECT * FROM users WHERE role='{$_POST['searchAuthor']}'";
+                $result = $db->query($search);
+                WHILE ($row = $result->fetch_array())
+                    echo $row['role'];
+                $result->close();
+                $db->close();
+            }
 
 
-        ?>
+            ?>
+        </div>
     </div>
 </div>
 <div ID="footer">

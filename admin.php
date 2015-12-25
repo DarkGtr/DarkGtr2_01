@@ -74,6 +74,24 @@
                 if(isset($_GET['level']) && !empty($_GET['level'])){
             ?>
             <table>
+                <?php
+                if ('POST' == $_SERVER['REQUEST_METHOD'] and
+                isset($_POST['user']) and
+                isset($_POST['up'])) {
+
+                $user = mysqli_real_escape_string($db, $_POST['user']);
+                $role = mysqli_real_escape_string($db, $_POST['up']);
+
+                $up_query = "UPDATE 'users' SET 'role'='$role' WHERE 'username'='$user'";
+
+
+                if (mysqli_query($db, $up_query)) {
+                echo "<script>alert('Updated!'); location.href='admin.php?level=update';</script>";
+                } else {
+                echo "<script>alert('Something went wrong!'); location.href='admin.php?level=update';</script>";
+                }
+                }
+                ?>
                 <tr>
                     <th>Username</th>
                     <th>Role</th>
@@ -91,7 +109,7 @@
                     </td>
                     <td><?php echo $u_role; ?></td>
                     <td>
-                        <form action="update.php" method="post">
+                        <form action="" method="post">
                             <label for="user"><?php echo $u_username; ?></label>
                             <input type="radio" name="user" value="<?php echo $u_username; ?>">
                                 <label for="up"></label>
@@ -102,7 +120,6 @@
                                 <option value="Admin">Admin</option>
                                     </select>
                             <input name="submit" type="submit" value="Modify"/>
-
                         </form>
                     </td>
                 </tr> <?php }} ?>

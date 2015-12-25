@@ -50,7 +50,7 @@
 <div ID="MainArea">
     <div class="Container page">
         <h1> <strong>Authors: </strong></h1><hr>
-        <a href="authorPage.php?Author=
+        <a href="authorpage.php?Author=
         <?php
         ini_set('display_errors', 1);
         ini_set('display_startup_errors', 1);

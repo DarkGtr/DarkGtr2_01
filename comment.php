@@ -30,5 +30,5 @@ require('config.php');
                 echo "<script>alert('Enter a comment');</script>";
             }
 
-        }}
+        }
     ?>

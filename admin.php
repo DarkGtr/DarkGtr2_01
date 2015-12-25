@@ -96,10 +96,10 @@
                                 <option value="Reader">Reader</option>
                                 <option value="Author">Author</option>
                                 <option value="Admin">Admin</option>
-                            <input name="submit" type="submit" value="<?php echo $u_username; ?>"/>
+                            <input name="submit" type="submit" value="submit"/>
                             </select>
                             <?php
-                            $update_id = $_GET['up'];
+                            $update_id = $_POST['up'];
 
                             $up_query = "UPDATE 'users' SET 'role'='$update_id' WHERE 'username'='$u_username'";
                             $run_query = $db->query($up_query);

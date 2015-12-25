@@ -13,7 +13,7 @@ error_reporting(E_ALL);
 require('config.php');
     $comment = $_GET['comment'];
     $submit = $_GET['submit'];
-    $post_title = $_GET['trip'];
+    $post_title = $_SESSION['comment'];
     $username = $_SESSION['username'];
 
 

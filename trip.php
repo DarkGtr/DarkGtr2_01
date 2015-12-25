@@ -68,7 +68,7 @@ WHILE ($row = $run_role->fetch_array()) {
                 $post_hashtags = $row['p_tag'];
 
         ?>
-            <h2><?php echo "<strong>$post_title</strong>" . " " . " by " . "<em>$post_Author</em>" . " ".  "Date: " . $post_date; ?></h2><hr>
+            <h2><?php echo "<strong>|$post_title|</strong>" . " " . " by " . "<em>$post_Author</em>" . " ".  "Date: " . $post_date; ?></h2><hr>
             <h2><?php echo $post_content; ?></h2>
             <h2>Country: <?php echo $post_country; ?></h2>
             <h2>Tags: <?php echo $post_hashtags; }}?></h2></h2>

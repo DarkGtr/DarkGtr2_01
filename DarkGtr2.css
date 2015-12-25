@@ -137,8 +137,9 @@ table th,tr,td {
 #authors  {
     text-decoration: none;
     padding-top: 2px;
+    color: black;
 }
 
-#authors :hover {
+#authors a:hover {
     background-color: #00A000;
 }

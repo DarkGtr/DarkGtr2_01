@@ -57,7 +57,8 @@
                  echo "Please wait to be verified by the Admin" . "<br>" .
                      "You can only read trips";
              }
-                 }
+                 }$run_role->close();
+        $db->close();
 
             ?>
         </h1>

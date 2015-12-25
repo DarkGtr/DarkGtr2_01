@@ -18,6 +18,7 @@ if (isset($_POST['Login'])) {
         header('location:HomePage.php');
     } else {
         echo "<script>alert('Username or Password is incorrect'); location.href='Login.php';</script>";
-    }
+    }$run_user->close();
+    $db->close();
 }
 ?>

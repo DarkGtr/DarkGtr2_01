@@ -22,6 +22,8 @@
             die ("error");
         }
         }
+$run_role->close();
+$db->close();
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -117,5 +119,6 @@
 
         if (mysqli_query($db, $insert_query)) {
             echo "<script>alert('You have uploaded the trip successfully')</script>";
-    }}}
+    }}
+        $db->close();}
 ?>

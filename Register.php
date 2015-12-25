@@ -18,6 +18,7 @@
         $newrecord = "You're successfully registered";
     }
 
+$db->close();
 ?>
 
 <!DOCTYPE html>

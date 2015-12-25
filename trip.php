@@ -24,6 +24,8 @@ WHILE ($row = $run_role->fetch_array()) {
         die ("error");
     }
 }
+
+    $trip = $_GET['trip'];
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -51,8 +53,11 @@ WHILE ($row = $run_role->fetch_array()) {
 <div ID="MainArea">
     <div class="Container page">
         <?php
-            $trip = $_GET['trip'];
-            echo $trip;
+            $query = "SELECT * FROM post WHERE t_title='$trip'";
+            $run_query = $db->query($query);
+            while($row = $run_query->fetch_array()) {
+                $post_title = $row['p_title'];
+            }
         ?>
     </div>
 </div>

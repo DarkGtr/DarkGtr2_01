@@ -16,7 +16,8 @@
         $row['role'];
     if ($row['role'] != 'Admin') {
         die ("error");
-    }}
+    }}  $run_role->close();
+        $db->close();
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -67,7 +68,8 @@
                     ?>
                     <td><?php echo $u_username; ?></td>
                     <td><a href="delete.php?del=<?php echo $u_username;?>">Delete</a></td>
-                </tr> <?php }} ?>
+                </tr> <?php }$run_query->close();
+                $db->close();} ?>
             </table>
         </h3>
         <h3>
@@ -110,7 +112,8 @@
                         <a href="update.php?auth=<?php echo $u_username;?>">Author</a> |
                         <a href="update.php?admin=<?php echo $u_username;?>">Admin</a>
                     </td>
-                </tr> <?php }} ?>
+                </tr> <?php }$run_query->close();
+                $db->close();}  ?>
             </table>
         </h3>
     </div>

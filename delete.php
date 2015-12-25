@@ -12,6 +12,8 @@
     if ($run_query) {
         echo "<script>alert('User Deleted'); location.href='admin.php?user=delete';</script>";
     }
+$run_query->close();
+$db->close();
 
 ?>
 

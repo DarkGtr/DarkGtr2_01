@@ -66,7 +66,7 @@
                     ?>
                     <td><?php echo $u_username; ?></td>
                     <td><a href="delete.php?del=<?php echo $u_username;?>">Delete</a></td>
-                </tr> <?php }} ?>
+                </tr> <?php $db->close();}} ?>
             </table>
         </h3>
         <h3>
@@ -90,7 +90,7 @@
                     <td><?php echo $u_username; ?></td>
                     <td><?php echo $u_role; ?></td>
                     <td>
-                        <form action="admin.php" method="post">
+                        <form action="admin.php?" method="post">
                             <select name="up">
                                 <option value="Pending">Pending</option>
                                 <option value="Reader">Reader</option>

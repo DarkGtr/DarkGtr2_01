@@ -65,7 +65,7 @@
 </div>
 <div ID="footer">
     <div class="Container">
-        Contact: 1400003@rgu.ac.uk
+        Contact: 1400003@rgu.ac.uk for any problem such as being Pending user for more than 24hours.
     </div>
 </div>
 </body>

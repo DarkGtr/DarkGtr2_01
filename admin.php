@@ -93,7 +93,7 @@
                     </td>
                     <td><?php echo $u_role; ?></td>
                     <td>
-                        <form action="" method="post">
+                        <form action="update.php" method="post">
                             <label for="user"><?php echo $u_username; ?></label>
                             <input name="user" id="user" type="radio" value="<?php echo $u_username; ?>">
                                 <label for="up"></label>
@@ -107,11 +107,8 @@
                         </form>
                     </td>
                 </tr> <?php }} ?>
-
             </table>
         </h3>
-
-
     </div>
 </div>
 <div ID="footer">
@@ -120,20 +117,3 @@
     </div>
 </div>
 </body>
-<?php
-    if (isset($_POST['submit'])) {
-    $user = mysqli_real_escape_string($db, $_POST['user']);
-    $role = mysqli_real_escape_string($db, $_POST['up']);
-
-    $up_query = "UPDATE 'users' SET 'role'='$role' WHERE 'username'='$user'";
-    $run_user = mysqli_query($db, $up_query);
-
-
-    if ($run_user) {
-    echo "<script>alert('Updated!'); location.href='admin.php?level=update';</script>";
-    } else {
-    echo "<script>alert('Something went wrong!'); location.href='admin.php?level=update';</script>";
-    }
-    }
-
-?>

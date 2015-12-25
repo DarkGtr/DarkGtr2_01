@@ -32,9 +32,9 @@ require('config.php');
 </div>
 <div ID="MainArea">
     <div class="Container page">
-        <h1> <strong>Trips: </strong></h1><hr>
+        <h1> <strong>Search: </strong></h1><hr>
         <h2 style="text-align: center">
-            <form action="search.php" method="post">
+            <form action="searchpage.php" method="post">
                 <input type="text" name="searchkey" placeholder="Search for keywords">
                 <input type="submit" value=">>"/>
                 </form>
@@ -43,6 +43,28 @@ require('config.php');
                 <input type="submit" value=">>"/>
             </form>
             </h2>
+    </div>
+    <div>
+        <?php
+
+        if(isset($_POST['searchkey'])){
+            $search = "SELECT * FROM post WHERE p_tag='{$_POST['searchkey']}'";
+            $result = $db->query($search);
+            WHILE ($row = $result->fetch_array())
+                echo $row['p_tag'];
+            $result->close();
+            $db->close();
+        } elseif($_POST['searchAuthor']) {
+            $search = "SELECT * FROM users WHERE role='{$_POST['searchAuthor']}'";
+            $result = $db->query($search);
+            WHILE ($row = $result->fetch_array())
+                echo $row['role'];
+            $result->close();
+            $db->close();
+        }
+
+
+        ?>
     </div>
 </div>
 <div ID="footer">

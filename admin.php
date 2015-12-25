@@ -88,7 +88,7 @@
                     <td><?php echo $u_role; ?></td>
                     <td>
                         <form action="update.php?up=<?php echo $u_username; ?>" method="get">
-                            <select name="update">
+                            <select name="up">
                                 <option value="Pending">Pending</option>
                                 <option value="Reader">Reader</option>
                                 <option value="Author">Author</option>

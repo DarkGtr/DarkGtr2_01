@@ -62,8 +62,8 @@
         while($row = $run_query->fetch_array()){
         $u_username = $row['username'];
         ?>
-        <a href="authorpage.php?Author=<?php echo $u_username; ?>
-       "><?php echo$u_username;}?></a></h2><br>
+        <a href="authorpage.php?Author=<?php echo $u_username . "<br>"; ?>
+       "><?php echo$u_username;}?></a></h2>
     </div>
 </div>
 <div ID="footer">

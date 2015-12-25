@@ -22,18 +22,19 @@
         echo "<script>alert('Something went wrong!'); location.href='admin.php?level=update';</script>";
     }
 }*/
+    if (isset($_POST['submit'])) {
+        $user = mysqli_real_escape_string($db, $_POST['user']);
+        $role = mysqli_real_escape_string($db, $_POST['up']);
 
-    $user = $_GET['user'];
-    $role = $_GET['up'];
-
-    $up_query = "UPDATE 'users' SET 'role'='$role' WHERE 'username'='$user'";
+        $up_query = "UPDATE 'users' SET 'role'='$role' WHERE 'username'='$user'";
+        $run_user = mysqli_query($db, $up_query);
 
 
-    if (mysqli_query($db, $up_query)) {
-        echo "<script>alert('Updated!'); location.href='admin.php?level=update';</script>";
-    } else {
-        echo "<script>alert('Something went wrong!'); location.href='admin.php?level=update';</script>";
+        if (mysqli_query($db, $run_user)) {
+            echo "<script>alert('Updated!'); location.href='admin.php?level=update';</script>";
+        } else {
+            echo "<script>alert('Something went wrong!'); location.href='admin.php?level=update';</script>";
+        }
     }
-
 
 ?>

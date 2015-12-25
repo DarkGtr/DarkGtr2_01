@@ -13,10 +13,10 @@ error_reporting(E_ALL);
 require('config.php');
 
 if(isset($_POST['submit'])) {
-    $comment = mysqli_real_escape_string($_POST['comment']);
-    $submit = mysqli_real_escape_string($_POST['submit']);
-    $post_title = mysqli_real_escape_string($_SESSION['comment']);
-    $username = mysqli_real_escape_string($_SESSION['username']);
+    $comment = $_POST['comment'];
+    $submit = $_POST['submit'];
+    $post_title = $_SESSION['comment'];
+    $username = $_SESSION['username'];
 
 
     $trip_query = "SELECT * FROM post WHERE p_title='$post_title'";

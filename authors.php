@@ -57,11 +57,10 @@
         error_reporting(E_ALL);
         require('config.php');
 
-        $list_query = "SELECT DISTINCT * FROM post";
+        $list_query = "SELECT * FROM users";
         $run_query = $db->query($list_query);
         while($row = $run_query->fetch_array()){
             $u_username = $row['username'];
-            $p_title = $row['p_title'];
 
             echo "<br>" . $u_username;} ?>
 

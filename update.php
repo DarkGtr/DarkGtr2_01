@@ -9,8 +9,8 @@
             isset($_POST['user']) and
             isset($_POST['up'])) {
 
-            $user = mysqli_real_escape_string($_POST['user']);
-            $role = mysqli_real_escape_string($_POST['up']);
+            $user = mysqli_real_escape_string($db, $_POST['user']);
+            $role = mysqli_real_escape_string($db, $_POST['up']);
 
             $up_query = "UPDATE 'users' SET 'role'='$role' WHERE 'username'='$user'";
 

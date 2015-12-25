@@ -51,7 +51,7 @@ WHILE ($row = $run_role->fetch_array()) {
 </div>
 <div ID="MainArea">
     <div class="Container page">
-        <h1> <strong>Authors: </strong></h1><hr>
+        <h1> <strong>Trips: </strong></h1><hr>
         <h2>
             <?php
             ini_set('display_errors', 1);

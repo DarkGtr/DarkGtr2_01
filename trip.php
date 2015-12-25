@@ -2,13 +2,13 @@
 session_start();
 if (!(isset($_SESSION['username']) && $_SESSION['username'] != '')) {
 }
-
+require('config.php');
 ?>
 <?php
 ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
-require('config.php');
+
 
 $role = "SELECT * FROM users WHERE username ='{$_SESSION['username']}'";
 $run_role = $db->query($role);

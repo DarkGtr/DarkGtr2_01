@@ -38,9 +38,6 @@
     }*/
     $pending = $_GET['pend'];
 
-
-
-
     if ($pending) {
         $up_query = "UPDATE 'users' SET 'role'='Pending' WHERE 'username'='$pending'";
         $run_user = mysqli_query($db, $up_query);
@@ -49,7 +46,8 @@
         } else  {
             echo "<script>alert('Something went wrong!'); location.href='admin.php?level=update';</script>";
         }}
-
+?>
+<?php
     $read = $_GET['read'];
          if ($read) {
              $up_query = "UPDATE 'users' SET 'role'='Reader' WHERE 'username'='$read'";
@@ -59,7 +57,8 @@
              } else  {
                  echo "<script>alert('Something went wrong!'); location.href='admin.php?level=update';</script>";
          }}
-
+?>
+<?php
    $auth = $_GET['auth'];
          if ($auth) {
              $up_query = "UPDATE 'users' SET 'role'='Author' WHERE 'username'='$auth'";
@@ -69,7 +68,8 @@
              } else  {
                  echo "<script>alert('Something went wrong!'); location.href='admin.php?level=update';</script>";
         }}
-
+?>
+<?php
 $admin = $_GET['admin'];
          if($admin) {
              $up_query = "UPDATE 'users' SET 'role'='Admin' WHERE 'username'='$admin'";

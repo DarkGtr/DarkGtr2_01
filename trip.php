@@ -60,12 +60,12 @@ WHILE ($row = $run_role->fetch_array()) {
             $query = "SELECT * FROM post WHERE p_title='$trip'";
             $run_query = $db->query($query);
             while($row = $run_query->fetch_array()) {
-                $post_username = $_POST['username'];
-                $post_date = $_POST['p_date'];
-                $post_title = $_POST['p_title'];
-                $post_content = $_POST['trip_info'];
-                $post_country = $_POST['p_country'];
-                $post_hashtags = $_POST['p_tag'];
+                $post_Author = $row['username'];
+                $post_date = $row['p_date'];
+                $post_title = $row['p_title'];
+                $post_content = $row['trip_info'];
+                $post_country = $row['p_country'];
+                $post_hashtags = $row['p_tag'];
 
         ?>
             <h2><?php echo $post_title . "by" . $post_Author . "Date: " . $post_date; ?></h2><hr>

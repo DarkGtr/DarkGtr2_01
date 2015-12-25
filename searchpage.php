@@ -55,7 +55,7 @@ require('config.php');
 
             <?php
             } elseif($_POST['searchAuthor']) {
-                $search = "SELECT * FROM users WHERE role='{$_POST['searchAuthor']}'";
+                $search = "SELECT * FROM users WHERE username='{$_POST['searchAuthor']}' AND role='Author'";
                 $result = $db->query($search);
                 WHILE ($row = $result->fetch_array())
                     $username = $row['username'];?>

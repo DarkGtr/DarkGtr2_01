@@ -50,6 +50,7 @@
 <div ID="MainArea">
     <div class="Container page">
         <h1> <strong>Authors: </strong></h1><hr>
+
         <?php
         ini_set('display_errors', 1);
         ini_set('display_startup_errors', 1);
@@ -61,8 +62,8 @@
         while($row = $run_query->fetch_array()){
         $u_username = $row['username'];
         ?>
-        <a href="authorpage.php?Author=<?php echo $u_username; ?>
-       "><h2><?php echo$u_username;} ?></h2><br></a>
+       <h2> <a href="authorpage.php?Author=<?php echo $u_username; ?>
+       "><?php echo$u_username;}?></a><br></h2>
     </div>
 </div>
 <div ID="footer">

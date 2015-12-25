@@ -88,7 +88,7 @@
                             $u_role = $row['role'];
                     ?>
                     <td>
-                        <form action="update.php" method="get">
+                        <form action="update.php" method="post">
                             <label for="user"><?php echo $u_username; ?></label>
                             <input type="radio" name="user" value="<?php echo $u_username; ?>">
                         </form>

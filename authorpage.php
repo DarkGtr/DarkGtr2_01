@@ -60,8 +60,8 @@ WHILE ($row = $run_role->fetch_array()) {
         ?>
         <h1>Author name: <?php echo $author; ?></h1>
         <h2>Authors posts:</h2>
-        <h3><a href="trip.php?trip=<?php echo $post_title ?>"><?php echo $post_title . '<br>'?></h3>
-    </div>
+        <h3><a href="trip.php?trip=<?php echo $post_title; ?>"><?php echo $post_title . '<br>';?></a></h3>
+    </div> <?php } ?>
 </div>
 <div ID="footer">
     <div class="Container">
@@ -69,4 +69,3 @@ WHILE ($row = $run_role->fetch_array()) {
     </div>
 </div>
 </body>
-</html>

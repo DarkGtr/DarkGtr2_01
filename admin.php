@@ -16,8 +16,7 @@
         $row['role'];
     if ($row['role'] != 'Admin') {
         die ("error");
-    }}  $run_role->close();
-        $db->close();
+    }}
 ?>
 <!DOCTYPE html>
 <html lang="en">

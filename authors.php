@@ -50,21 +50,21 @@
 <div ID="MainArea">
     <div class="Container page">
         <a href="authors.php?"
-           <h1> Authors: <br><hr>
+           <h1> Authors: </h1><br><hr>
         <?php
         ini_set('display_errors', 1);
         ini_set('display_startup_errors', 1);
         error_reporting(E_ALL);
         require('config.php');
 
-        $list_query = "SELECT * FROM users";
+        $list_query = "SELECT * FROM users WHERE role='Author'";
         $run_query = $db->query($list_query);
         while($row = $run_query->fetch_array()){
             $u_username = $row['username'];
 
             echo "<br>" . "<h2>$u_username</h2>";} ?>
 
-        </h1>
+
     </div>
 </div>
 <div ID="footer">

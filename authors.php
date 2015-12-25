@@ -64,7 +64,6 @@
         <h1> <strong>Authors: </strong></h1><hr>
         <a href="authorpage.php?Author=<?php echo $u_username; ?>
        "><h2><?php echo$u_username;} ?></h2><br></a>
-
     </div>
 </div>
 <div ID="footer">

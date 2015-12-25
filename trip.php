@@ -86,7 +86,7 @@ WHILE ($row = $run_role->fetch_array()) {
                     <?php
                     $comment = $_POST['comment'];
                     $submit = $_POST['submit'];
-
+                    echo $comment;
                     $trip_query = "SELECT * FROM post WHERE p_title='$post_title'";
                     $run_query = $db->query($query);
                     while($row = $run_query->fetch_array()) {

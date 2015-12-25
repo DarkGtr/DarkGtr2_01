@@ -122,7 +122,7 @@
 </body>
 <?php
 require('config.php');
-if ('POST' == $_SERVER['REQUEST_METHOD'] and
+if ('submit' == $_SERVER['REQUEST_METHOD'] and
     isset($_POST['user']) and
     isset($_POST['up'])) {
 

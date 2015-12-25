@@ -70,12 +70,12 @@ WHILE ($row = $run_role->fetch_array()) {
             <h2><?php echo $post_content; ?></h2>
             <h2>Country: <?php echo $post_country; ?></h2>
             <h2>Tags: <?php echo $post_hashtags; }}?></h2></h2>
-        <?php if ($_SESSION['username'] == true) { $post_title = $_GET['trip'];?>
+        <?php if ($_SESSION['username'] == true) {  ?>
         <div ID="Display">
 
         </div>
         <div ID="Comment">
-            <form action="comment.php?trip=<?php echo $post_title; ?>" method="get">
+            <form action="comment.php?trip=<?php echo $_GET['trip']; ?>" method="get">
                 <table>
 
                     <tr>

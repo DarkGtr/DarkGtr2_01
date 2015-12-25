@@ -35,7 +35,7 @@
             $u_username = $row['username'];
             $p_title = $row['p_title'];
 
-            echo  $p_title . "By " . $u_username;} ?>
+            echo $u_username;} ?>
 
         ?>
     </div>

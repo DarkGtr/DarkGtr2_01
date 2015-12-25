@@ -24,6 +24,7 @@ WHILE ($row = $run_role->fetch_array()) {
         die ("error");
     }
 }
+$author = $_GET['author'];
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -49,17 +50,15 @@ WHILE ($row = $run_role->fetch_array()) {
 </div>
 <div ID="MainArea">
     <div class="Container page">
+        <h1>Author name: <?php echo $author; ?></h1><hr>
+        <h2>  Author's posts:<br>
         <?php
-            $author = $_GET['author'];
             $query = "SELECT * FROM post WHERE username='$author'";
             $run_query = $db->query($query);
             while($row = $run_query->fetch_array()){
             $post_title = $row['p_title'];
         ?>
-        Author name: <?php echo $author; ?><br>
-        Author's posts:<br>
-        <a href="trip.php?trip=<?php echo $post_title; ?>"><?php echo $post_title  . "<br>";}?></a>
-
+        <a href="trip.php?trip=<?php echo $post_title; ?>"><?php echo $post_title  . "<br>";}?></a></h2>
     </div>
 </div>
 <div ID="footer">

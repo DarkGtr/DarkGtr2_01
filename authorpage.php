@@ -50,7 +50,7 @@ WHILE ($row = $run_role->fetch_array()) {
 <div ID="MainArea">
     <div class="Container page">
         <?php
-            $author = $_GET['author'];
+            $author = $_GET['Author'];
             echo $author;
         ?>
     </div>

@@ -100,8 +100,9 @@
                                 <option value="Reader">Reader</option>
                                 <option value="Author">Author</option>
                                 <option value="Admin">Admin</option>
+                                    </select>
                             <input name="submit" type="submit" value="Modify"/>
-                            </select>
+
                         </form>
                     </td>
                 </tr> <?php }} ?>

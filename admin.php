@@ -99,16 +99,16 @@
                             <input name="submit" type="submit" value="submit"/>
                             </select>
                             <?php
-                            $update_id = $_POST['up'];
+                                $update_id = $_POST['up'];
 
-                            $up_query = "UPDATE 'users' SET 'role'='$update_id' WHERE 'username'='$u_username'";
-                            $run_query = $db->query($up_query);
+                                $up_query = "UPDATE 'users' SET 'role'='$update_id' WHERE 'username'='$u_username'";
+                                $run_query = $db->query($up_query);
 
-                            if ($run_query) {
-                            echo "<script>alert('Updated!'); location.href='admin.php?level=update';</script>";
-                            } else {
-                            echo "<script>alert('Something went wrong!'); location.href='admin.php?level=update';</script>";
-                            }
+                                if ($run_query) {
+                                 echo "<script>alert('Updated!'); location.href='admin.php?level=update';</script>";
+                                } /*else {
+                                echo "<script>alert('Something went wrong!'); location.href='admin.php?level=update';</script>";
+                            }*/
                                 ?>
                         </form>
                     </td>

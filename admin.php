@@ -66,7 +66,7 @@
                     ?>
                     <td><?php echo $u_username; ?></td>
                     <td><a href="delete.php?del=<?php echo $u_username;?>">Delete</a></td>
-                </tr> <?php $db->close();}} ?>
+                </tr> <?php }} ?>
             </table>
         </h3>
         <h3>
@@ -81,14 +81,14 @@
                 </tr>
                 <tr>
                     <?php
-                        $list_query = "SELECT * FROM users";
-                        $run_query = $db->query($list_query);
-                        while($row = $run_query->fetch_array()) {
-                            $u_username = $row['username'];
-                            $u_role = $row['role'];
+                        $list_query2 = "SELECT * FROM users";
+                        $run_query2 = $db->query($list_query2);
+                        while($row2 = $run_query2->fetch_array()) {
+                            $u_username2 = $row2['username'];
+                            $u_role2 = $row2['role'];
                     ?>
-                    <td><?php echo $u_username; ?></td>
-                    <td><?php echo $u_role; ?></td>
+                    <td><?php echo $u_username2; ?></td>
+                    <td><?php echo $u_role2; ?></td>
                     <td>
                         <form action="admin.php?" method="post">
                             <select name="up">
@@ -101,10 +101,10 @@
                             <?php
                                 $update_id = $_POST['up'];
 
-                                $up_query = "UPDATE 'users' SET 'role'='$update_id' WHERE 'username'='$u_username'";
-                                $run_query = $db->query($up_query);
+                                $up_query = "UPDATE 'users' SET 'role'='$update_id' WHERE 'username'='$u_username2'";
+                                $run_query2 = $db->query($up_query);
 
-                                if ($run_query) {
+                                if ($run_query2) {
                                  echo "<script>alert('Updated!'); location.href='admin.php?level=update';</script>";
                                 } /*else {
                                 echo "<script>alert('Something went wrong!'); location.href='admin.php?level=update';</script>";

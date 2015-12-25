@@ -96,7 +96,7 @@
                         <form action="" method="post">
                             <label for="user"><?php echo $u_username; ?></label>
                             <input name="user" id="user" type="radio" value="<?php echo $u_username; ?>">
-                                <label for="up"></label>
+                                <label for="up">up</label>
                                     <select name="up" id="up">
                                 <option value="Pending">Pending</option>
                                 <option value="Reader">Reader</option>

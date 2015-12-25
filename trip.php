@@ -40,6 +40,8 @@ WHILE ($row = $run_role->fetch_array()) {
 <div ID = "MainHeader">
     <div class="Container">
         <div ID="LogoArea">
+            <?php if($_SESSION['username'] == true) { ?>
+                <a href="Logout.php"><li>Logout</li></a><?php }?>
             <a href="index.html" ID="LogoLink">Logo</a>
         </div>
         <div ID="NavArea">

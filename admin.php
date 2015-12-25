@@ -104,10 +104,10 @@
                                     </select>
                             <input name="submit" type="submit" value="submit"/>
                         </form>-->
-                        <a href="update.php?pen=<?php echo $u_username;?>">Pending </a>
-                        <a href="update.php?read=<?php echo $u_username;?>">Reader </a>
-                        <a href="update.php?auth=<?php echo $u_username;?>">Author </a>
-                        <a href="update.php?admin=<?php echo $u_username;?>">Delete </a>
+                        <a href="update.php?pen=<?php echo $u_username;?>">Pending</a> |
+                        <a href="update.php?read=<?php echo $u_username;?>">Reader</a> |
+                        <a href="update.php?auth=<?php echo $u_username;?>">Author</a> |
+                        <a href="update.php?admin=<?php echo $u_username;?>">Admin </a>
                     </td>
                 </tr> <?php }} ?>
             </table>

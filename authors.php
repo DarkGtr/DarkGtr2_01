@@ -61,8 +61,7 @@
         $run_query = $db->query($list_query);
         while($row = $run_query->fetch_array()){
             $u_username = $row['username'];
-
-            echo "<br>" . "h2". $u_username . "</h2>";} ?>"></a>
+        ?>"><?php echo "<br>" . "h2". $u_username . "</h2>";} ?></a>
 
 
     </div>

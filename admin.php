@@ -68,8 +68,7 @@
                     ?>
                     <td><?php echo $u_username; ?></td>
                     <td><a href="delete.php?del=<?php echo $u_username;?>">Delete</a></td>
-                </tr> <?php }$run_query->close();
-                $db->close();} ?>
+                </tr> <?php }} ?>
             </table>
         </h3>
         <h3>
@@ -112,8 +111,7 @@
                         <a href="update.php?auth=<?php echo $u_username;?>">Author</a> |
                         <a href="update.php?admin=<?php echo $u_username;?>">Admin</a>
                     </td>
-                </tr> <?php }$run_query->close();
-                $db->close();}  ?>
+                </tr> <?php }} ?>
             </table>
         </h3>
     </div>

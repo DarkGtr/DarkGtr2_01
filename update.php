@@ -30,7 +30,7 @@
         $run_user = mysqli_query($db, $up_query);
 
 
-        if (mysqli_query($db, $run_user)) {
+        if ($run_user) {
             echo "<script>alert('Updated!'); location.href='admin.php?level=update';</script>";
         } else {
             echo "<script>alert('Something went wrong!'); location.href='admin.php?level=update';</script>";

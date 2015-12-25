@@ -54,14 +54,11 @@ WHILE ($row = $run_role->fetch_array()) {
             $query = "SELECT * FROM post WHERE username='$author'";
             $run_query = $db->query($query);
             while($row = $run_query->fetch_array()){
-            $u_username = $row['username'];
             $post_title = $row['p_title'];
-            $post_title2 = $row['p_title'];
-
         ?>
-        <h2>Author name: <?php echo $author; ?><br>
+        Author name: <?php echo $author; ?><br>
         Author's posts:<br>
-        <a href="trip.php?trip=<?php echo $post_title; ?>"><?php echo $post_title2;}?></a></h2>
+        <a href="trip.php?trip=<?php echo $post_title; ?>"><?php echo $post_title2;}?></a>
     </div>
 </div>
 <div ID="footer">

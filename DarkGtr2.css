@@ -140,6 +140,6 @@ table th,tr,td {
     color: black;
 }
 
-#authors a:hover {
+#authors:hover {
     background-color: #00A000;
 }

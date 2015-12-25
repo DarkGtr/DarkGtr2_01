@@ -50,7 +50,7 @@
 <div ID="MainArea">
     <div class="Container page">
         <h1> <strong>Authors: </strong></h1><hr>
-        <h2>
+        <h2><br>
         <?php
         ini_set('display_errors', 1);
         ini_set('display_startup_errors', 1);
@@ -63,7 +63,7 @@
         $u_username = $row['username'];
         ?>
         <a href="authorpage.php?Author=<?php echo $u_username; ?>
-       "><?php echo$u_username;}?></a><br></h2>
+       "><?php echo$u_username;}?></a></h2>
     </div>
 </div>
 <div ID="footer">

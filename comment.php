@@ -11,8 +11,8 @@ ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 require('config.php');
-    $comment = $_GET['comment'];
-    $submit = $_GET['submit'];
+    $comment = $_POST['comment'];
+    $submit = $_POST['submit'];
     $post_title = $_SESSION['comment'];
     $username = $_SESSION['username'];
 

@@ -95,7 +95,7 @@
                     </td>
                     <td><?php echo $u_role; ?></td>
                     <td>
-                        <form action="update.php?up=" method="post">
+                        <form action="update.php" method="post">
                             <select name="up">
                                 <option value="Pending">Pending</option>
                                 <option value="Reader">Reader</option>

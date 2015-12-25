@@ -72,6 +72,7 @@
         <h3>
             <?php
                 if(isset($_GET['level']) && !empty($_GET['level'])){
+                 require('config.php');
             ?>
             <table>
                 <?php
@@ -99,6 +100,7 @@
                 </tr>
                 <tr>
                     <?php
+
                         $list_query = "SELECT * FROM users";
                         $run_query = $db->query($list_query);
                         while($row = $run_query->fetch_array()) {
@@ -109,11 +111,11 @@
                     </td>
                     <td><?php echo $u_role; ?></td>
                     <td>
-                        <form action="admin.php?level=update" method="post">
+                        <form action="" method="post">
                             <label for="user"><?php echo $u_username; ?></label>
-                            <input type="radio" name="user" value="<?php echo $u_username; ?>">
+                            <input name="user" id="user" type="radio" value="">
                                 <label for="up"></label>
-                                    <select name="up">
+                                    <select name="up" id="up">
                                 <option value="Pending">Pending</option>
                                 <option value="Reader">Reader</option>
                                 <option value="Author">Author</option>

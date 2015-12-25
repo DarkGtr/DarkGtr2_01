@@ -58,8 +58,8 @@ WHILE ($row = $run_role->fetch_array()) {
             $post_title = $row['p_title'];
 
         ?>
-        <h1>Author name: <?php echo $author; ?></h1>
-        <h2>Authors posts:
+        <h2>Author name: <?php echo $author; ?><br>
+        Author's posts:<br>
         <a href="trip.php?trip=<?php echo $post_title; ?>"><?php echo $post_title;}?></a></h2>
     </div>
 </div>

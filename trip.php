@@ -73,17 +73,17 @@ WHILE ($row = $run_role->fetch_array()) {
             <h2><?php echo $post_content; ?></h2>
             <h2>Country: <?php echo $post_country; ?></h2>
             <h2>Tags: <?php echo $post_hashtags; }}?></h2></h2>
-        <?php if ($_SESSION['username'] == true) { ?>
+        <?php if ($_SESSION['username'] == true) { $post_title = $_GET['trip'];?>
         <div ID="Display">
 
         </div>
         <div ID="Comment">
-            <form action="trip.php" method="post">
+            <form action="trip.php?trip=<?php echo $post_title;?>" method="post">
                 <table>
                     <?php
                     $comment = $_POST['comment'];
                     $submit = $_POST['submit'];
-                    $post_title = $_GET['trip'];
+
                     $trip_query = "SELECT * FROM post WHERE p_title='$post_title'";
                     $run_query = $db->query($query);
                     while($row = $run_query->fetch_array()) {

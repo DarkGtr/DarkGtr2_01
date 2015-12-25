@@ -62,7 +62,7 @@
         while($row = $run_query->fetch_array()){
             $u_username = $row['username'];
 
-            echo "<br>" . $u_username;} ?>
+            echo "<br>" . "<h1>$u_username</h1>";} ?>
 
         </h1>
     </div>

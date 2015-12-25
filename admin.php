@@ -90,7 +90,7 @@
                     <td><?php echo $u_username2; ?></td>
                     <td><?php echo $u_role2; ?></td>
                     <td>
-                        <form action="admin.php?" method="post">
+                        <form action="admin.php?level=update" method="post">
                             <select name="up">
                                 <option value="Pending">Pending</option>
                                 <option value="Reader">Reader</option>

@@ -41,7 +41,9 @@ WHILE ($row = $run_role->fetch_array()) {
         <div ID="NavArea">
             <ul ID="Nav"><?php if($_SESSION['username'] == true) { ?>
                 <a href="Logout.php"><li>Logout</li></a><?php }?>
-                <a href="HomePage.php"><li>Home</li></a>
+                <?php if($_SESSION['username'] == true) { ?>
+                    <a href="HomePage.php"><li>Home</li></a><?php }
+                else { ?> <a href="index.html"><li>Home</li></a><?php } ?>
             </ul>
         </div>
     </div>

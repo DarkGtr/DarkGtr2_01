@@ -70,6 +70,7 @@
         }}
 ?>
 <?php
+
 $admin = $_GET['admin'];
          if($admin) {
              $up_query = "UPDATE 'users' SET 'role'='Admin' WHERE 'username'='$admin'";

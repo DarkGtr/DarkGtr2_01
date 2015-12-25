@@ -106,9 +106,9 @@ require('config.php');
                                     </select>
                             <input name="submit" type="submit" value="submit"/>
                         </form>-->
-                        <a href="updateP.php?pend=<?php echo $row['username'];?>">Pending</a> |
-                        <a href="updateR.php?read=<?php echo $row['username'];?>">Reader</a> |
-                        <a href="updateP.php?auth=<?php echo $row['username'];?>">Author</a> |
+                        <a href="update.php?pend=<?php echo $row['username'];?>">Pending</a> |
+                        <a href="update.php?read=<?php echo $row['username'];?>">Reader</a> |
+                        <a href="update.php?auth=<?php echo $row['username'];?>">Author</a> |
                         <a href="update.php?admin=<?php echo $row['username'];?>">Admin</a>
                     </td>
                 </tr> <?php }} ?>

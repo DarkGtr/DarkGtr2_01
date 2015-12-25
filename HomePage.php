@@ -27,6 +27,7 @@ require('config.php');
                 <a href="Logout.php"><li>Logout</li></a>
                 <a href="authors.php"><li>Authors</li></a>
                 <a href="trips.php"><li>Trips</li></a>
+                <a href="searchpage.php"><li>Search</li></a>
             </ul>
         </div>
     </div>

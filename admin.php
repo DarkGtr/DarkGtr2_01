@@ -93,7 +93,7 @@
                     </td>
                     <td><?php echo $u_role; ?></td>
                     <td>
-                        <form action="update.php" method="post">
+                        <form action="update.php" method="get">
                             <label for="user"><?php echo $u_username; ?></label>
                             <input name="user" id="user" type="radio" value="<?php echo $u_username; ?>">
                                 <label for="up"></label>

@@ -23,8 +23,8 @@
     }
 }*/
 
-    $user = $_POST['user'];
-    $role = $_POST['up'];
+    $user = $_GET['user'];
+    $role = $_GET['up'];
 
     $up_query = "UPDATE 'users' SET 'role'='$role' WHERE 'username'='$user'";
 

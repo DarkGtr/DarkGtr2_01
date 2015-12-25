@@ -13,6 +13,7 @@ error_reporting(E_ALL);
     $comment = $_POST['comment'];
     $submit = $_POST['submit'];
     $post_title = $_GET['trip'];
+    echo $post_title;
 
     $trip_query = "SELECT * FROM post WHERE p_title='$post_title'";
     $run_query = $db->query($query);

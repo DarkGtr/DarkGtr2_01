@@ -47,38 +47,3 @@
             echo "<script>alert('Something went wrong!'); location.href='admin.php?level=update';</script>";
         }}
 ?>
-<?php
-    $read = $_GET['read'];
-         if ($read) {
-             $up_query = "UPDATE 'users' SET 'role'='Reader' WHERE 'username'='$read'";
-             $run_user = mysqli_query($db, $up_query);
-             if ($run_user) {
-                 echo "<script>alert('Updated!'); location.href='admin.php?level=update';</script>";
-             } else  {
-                 echo "<script>alert('Something went wrong!'); location.href='admin.php?level=update';</script>";
-         }}
-?>
-<?php
-   $auth = $_GET['auth'];
-         if ($auth) {
-             $up_query = "UPDATE 'users' SET 'role'='Author' WHERE 'username'='$auth'";
-             $run_user = mysqli_query($db, $up_query);
-             if ($run_user) {
-                 echo "<script>alert('Updated!'); location.href='admin.php?level=update';</script>";
-             } else  {
-                 echo "<script>alert('Something went wrong!'); location.href='admin.php?level=update';</script>";
-        }}
-?>
-<?php
-
-$admin = $_GET['admin'];
-         if($admin) {
-             $up_query = "UPDATE 'users' SET 'role'='Admin' WHERE 'username'='$admin'";
-             $run_user = mysqli_query($db, $up_query);
-             if ($run_user) {
-                 echo "<script>alert('Updated!'); location.href='admin.php?level=update';</script>";
-             } else  {
-                 echo "<script>alert('Something went wrong!'); location.href='admin.php?level=update';</script>";
-        }}
-
-?>

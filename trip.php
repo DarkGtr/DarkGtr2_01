@@ -22,7 +22,9 @@
 </div>
 <div ID="MainArea">
     <div class="Container page">
+        <?php
 
+        ?>
     </div>
 </div>
 <div ID="footer">

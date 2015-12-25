@@ -22,7 +22,22 @@
 </div>
 <div ID="MainArea">
     <div class="Container page">
+        <a href="authors.php?"
+        <?php
+        ini_set('display_errors', 1);
+        ini_set('display_startup_errors', 1);
+        error_reporting(E_ALL);
+        require('config.php');
 
+        $list_query = "SELECT * FROM post";
+        $run_query = $db->query($list_query);
+        while($row = $run_query->fetch_array()){
+            $u_username = $row['username'];
+            $p_title = $row['p_title'];
+
+            echo $u_username . $p_title;} ?>
+
+        ?>
     </div>
 </div>
 <div ID="footer">

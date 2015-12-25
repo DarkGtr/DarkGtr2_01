@@ -3,17 +3,19 @@ session_start();
 if (!(isset($_SESSION['username']) && $_SESSION['username'] != '')) {
     echo "<script>alert('Please Login'); location.href='Login.php';</script>";
 }
-require('config.php');
+
 ?>
 
 <?php
 ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
+require('config.php');
     $comment = $_POST['comment'];
     $submit = $_POST['submit'];
     $post_title = $_GET['trip'];
-    echo $post_title;
+    $username = $_SESSION['username'];
+
 
     $trip_query = "SELECT * FROM post WHERE p_title='$post_title'";
     $run_query = $db->query($query);
@@ -22,8 +24,8 @@ error_reporting(E_ALL);
 
 
         if(isset($submit)) {
-            $query = "INSERT INTO 'comments' (post_id, username, comment)
-                                VALUES ('$p_id', '{$_SESSION['username']}'), '$comment'";
+            $query = "INSERT INTO comments (post_id, username, comment)
+                                VALUES ('$p_id', '$username'), '$comment'";
             if (mysqli_query($db, $query)) {
                 echo "<script>alert('You have just commented!');location.href='trip.php?trip='$post_title'</script>";
             } elseif ($comment = '') {

@@ -51,7 +51,7 @@
 <?php
     if ($_GET['read']) {
         $read = $_GET['read'];
-        $up_query = "UPDATE users SET role='Pending' WHERE username='$read'";
+        $up_query = "UPDATE users SET role='Reader' WHERE username='$read'";
         $run_user = mysqli_query($db, $up_query);
         if ($run_user) {
             echo "<script>alert('Updated!'); location.href='admin.php?level=update';</script>";
@@ -62,7 +62,7 @@
 <?php
     if ($_GET['auth']) {
         $auth = $_GET['auth'];
-        $up_query = "UPDATE users SET role='Pending' WHERE username='$auth'";
+        $up_query = "UPDATE users SET role='Author' WHERE username='$auth'";
         $run_user = mysqli_query($db, $up_query);
         if ($run_user) {
             echo "<script>alert('Updated!'); location.href='admin.php?level=update';</script>";
@@ -72,8 +72,8 @@
 ?>
 <?php
     if ($_GET['admin']) {
-        $admin = $_GET['pend'];
-        $up_query = "UPDATE users SET role='Pending' WHERE username='$admin'";
+        $admin = $_GET['admin'];
+        $up_query = "UPDATE users SET role='Admin' WHERE username='$admin'";
         $run_user = mysqli_query($db, $up_query);
         if ($run_user) {
             echo "<script>alert('Updated!'); location.href='admin.php?level=update';</script>";

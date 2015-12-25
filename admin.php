@@ -44,7 +44,7 @@
     <div class="Container page">
         <h1> <?php echo "Admin: " . $_SESSION['username']; ?> </h1>
         <h2>
-            <a href="admin.php?">Users_level</a> |
+            <a href="admin.php?user=level">Users_level</a> |
             <a href="admin.php?user=delete">Users_delete</a>
         </h2>
         <h3>

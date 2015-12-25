@@ -109,7 +109,7 @@
                     </td>
                     <td><?php echo $u_role; ?></td>
                     <td>
-                        <form action="admin.php" method="post">
+                        <form action="admin.php?level=update" method="post">
                             <label for="user"><?php echo $u_username; ?></label>
                             <input type="radio" name="user" value="<?php echo $u_username; ?>">
                                 <label for="up"></label>

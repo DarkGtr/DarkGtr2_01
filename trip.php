@@ -114,7 +114,7 @@ WHILE ($row = $run_role->fetch_array()) {
                         <td colspan="2"><textarea name="comment"></textarea></td>
                     </tr>
                     <tr>
-                        <td colspan="2"><input type="submit" name="submit" value="comment"/></td>
+                        <td colspan="2"><input type="submit" name="submit" value="submit"/></td>
                     </tr>
                 </table>
             </form>

@@ -49,16 +49,21 @@ require('config.php');
             if(isset($_POST['searchkey'])){
                 $search = "SELECT * FROM post WHERE p_tag='{$_POST['searchkey']}'";
                 $result = $db->query($search);
-                WHILE ($row = $result->fetch_array())
-                    echo $row['p_tag'];
-                $result->close();
+                WHILE ($row = $result->fetch_array()){
+                    $post_title = $row['p_title'];
+                    ?> <a ID="posts" href="trip.php?trip=<?php echo $post_title; ?>"><?php echo $post_title ."<br>";?></a>
+                <?php $result->close();
                 $db->close();
-            } elseif($_POST['searchAuthor']) {
+           } }?>
+            <?php
+            if($_POST['searchAuthor']) {
                 $search = "SELECT * FROM users WHERE role='{$_POST['searchAuthor']}'";
                 $result = $db->query($search);
                 WHILE ($row = $result->fetch_array())
-                    echo $row['role'];
-                $result->close();
+                    $username = $row['username'];?>
+            <a ID="authors" href="authorpage.php?author=<?php echo $username; ?>
+       "><?php echo $username  . "<br>";?></a>
+                <?php $result->close();
                 $db->close();
             }
 

@@ -40,7 +40,7 @@
 
     if ($_GET['pend']) {
         $pending = $_GET['pend'];
-        $up_query = "UPDATE users SET role='Pending' WHERE 'username'='$pending'";
+        $up_query = "UPDATE users SET role='Pending' WHERE username='$pending'";
         $run_user = mysqli_query($db, $up_query);
         if ($run_user) {
             echo "<script>alert('Updated!'); location.href='admin.php?level=update';</script>";

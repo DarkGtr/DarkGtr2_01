@@ -58,7 +58,7 @@ WHILE ($row = $run_role->fetch_array()) {
         ?>
         Author name: <?php echo $author; ?><br>
         Author's posts:<br>
-        <a href="trip.php?trip=<?php echo $post_title; ?>"><?php echo $post_title;}?></a>
+        <a href="trip.php?trip=<?php echo $post_title; ?>"><?php echo $post_title;?> <?php } ?></a>
     </div>
 </div>
 <div ID="footer">

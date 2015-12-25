@@ -22,10 +22,9 @@
     }
 }*/
 
-require('config.php');
 if (isset($_POST['submit'])) {
-    $user= $_POST['user'];
-    $role= $_POST['up'];
+    $user = $_POST['user'];
+    $role = $_POST['up'];
 
     $up_query = "UPDATE 'users' SET 'role'='$role' WHERE 'username'='$user'";
 

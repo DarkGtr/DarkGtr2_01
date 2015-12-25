@@ -53,13 +53,24 @@ WHILE ($row = $run_role->fetch_array()) {
 </div>
 <div ID="MainArea">
     <div class="Container page">
+        <h2>
         <?php
             $query = "SELECT * FROM post WHERE p_title='$trip'";
             $run_query = $db->query($query);
             while($row = $run_query->fetch_array()) {
-                $post_title = $row['p_title'];
-            }
+                $post_title = $_POST['p_title'];
+                $post_country = $_POST['p_country'];
+                $post_date = $_POST['p_date'];
+                $post_Author = $_POST['username'];
+                $post_hashtags = $_POST['p_tags'];
+                $post_content = $_POST['trip_info'];
+                $post_image = $_FILES['image'];
         ?>
+            <h2><?php echo $post_title . "by" . $post_Author . "Date: " . $post_date; ?></h2><hr>
+            <h2><?php echo $post_content; ?></h2>
+            <h2>Post Country: <?php $_POST['p_country']; ?></h2>
+            <h2>Tags: <?php $_POST['p_tags']; ?></h2></h2>
+
     </div>
 </div>
 <div ID="footer">

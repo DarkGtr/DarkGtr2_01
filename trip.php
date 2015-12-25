@@ -72,12 +72,11 @@ WHILE ($row = $run_role->fetch_array()) {
             <h2><?php echo $post_content; ?></h2>
             <h2>Country: <?php echo $post_country; ?></h2>
             <h2>Tags: <?php echo $post_hashtags; }}?></h2></h2>
-    </div>
-    <?php if ($_SESSION['username'] == true) { ?>
-    <div ID="Comment">
-        <form action="trip.php" method="post">
-            <table>
-                <?php
+        <?php if ($_SESSION['username'] == true) { ?>
+        <div ID="Comment">
+            <form action="trip.php" method="post">
+                <table>
+                    <?php
                     $comment = $_POST['comment'];
                     $submit = $_POST['submit'];
                     $post_title = $_GET['trip'];
@@ -87,37 +86,38 @@ WHILE ($row = $run_role->fetch_array()) {
                         $p_id = $row['p_id'];
 
 
-                    if($submit) {
-                        if($comment) {
-                            $query = "INSERT INTO comment (username, comment, p_id)
+                        if($submit) {
+                            if($comment) {
+                                $query = "INSERT INTO comment (username, comment, p_id)
                             VALUES ('{$_SESSION['username']}', '$comment'), '$p_id'";
-                            if (!mysqli_query($db, $query)) {
-                                echo "<script>alert('Please enter a comment');</script>";
+                                if (!mysqli_query($db, $query)) {
+                                    echo "<script>alert('Please enter a comment');</script>";
+                                }
+
+                                echo "You've just commented";
                             }
 
-                            echo "You've just commented";
                         }
-
-                    }
                     }}
-                ?>
-                <tr>
-                    <td>Name: <?php if($_SESSION['username']){
-                    echo $_SESSION['username'];
-                    ?></td>
-                </tr>
-                <tr>
-                    <td colspan="2">Comment: </td>
-                </tr>
-                <tr>
-                    <td colspan="2"><textarea name="comment"></textarea></td>
-                </tr>
-                <tr>
-                    <td colspan="2"><input type="submit" name="submit" value="comment"/></td>
-                </tr>
-            </table>
-        </form>
-    </div> <?php } else {echo "Please login to add comment";} ?>
+                    ?>
+                    <tr>
+                        <td>Name: <?php if($_SESSION['username']){
+                            echo $_SESSION['username'];
+                            ?></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">Comment: </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2"><textarea name="comment"></textarea></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2"><input type="submit" name="submit" value="comment"/></td>
+                    </tr>
+                </table>
+            </form>
+        </div> <?php } else {echo "Please login to add comment";} ?>
+    </div>
 </div>
 <div ID="footer">
     <div class="Container">

@@ -26,6 +26,7 @@ require('config.php');
             <ul ID="Nav">
                 <a href="Logout.php"><li>Logout</li></a>
                 <a href="authors.php"><li>Authors</li></a>
+                <a href="trips.php"><li>Trips</li></a>
             </ul>
         </div>
     </div>

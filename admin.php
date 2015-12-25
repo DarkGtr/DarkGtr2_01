@@ -90,7 +90,7 @@
                     <td><?php echo $u_username; ?></td>
                     <td><?php echo $u_role; ?></td>
                     <td>
-                        <form action="update.php" method="get">
+                        <form action="admin.php" method="post">
                             <select name="up">
                                 <option value="Pending">Pending</option>
                                 <option value="Reader">Reader</option>
@@ -98,6 +98,18 @@
                                 <option value="Admin">Admin</option>
                             <input name="submit" type="submit" value="<?php echo $u_username; ?>"/>
                             </select>
+                            <?php
+                            $update_id = $_GET['up'];
+
+                            $up_query = "UPDATE 'users' SET 'role'='$update_id' WHERE 'username'='$u_username'";
+                            $run_query = $db->query($up_query);
+
+                            if ($run_query) {
+                            echo "<script>alert('Updated!'); location.href='admin.php?level=update';</script>";
+                            } else {
+                            echo "<script>alert('Something went wrong!'); location.href='admin.php?level=update';</script>";
+                            }
+                                ?>
                         </form>
                     </td>
                 </tr> <?php }} ?>

@@ -51,6 +51,7 @@ WHILE ($row = $run_role->fetch_array()) {
         </div>
     </div>
 </div>
+
 <div ID="MainArea">
     <div class="Container page">
         <h2>
@@ -73,6 +74,9 @@ WHILE ($row = $run_role->fetch_array()) {
             <h2>Country: <?php echo $post_country; ?></h2>
             <h2>Tags: <?php echo $post_hashtags; }}?></h2></h2>
         <?php if ($_SESSION['username'] == true) { ?>
+        <div ID="Display">
+
+        </div>
         <div ID="Comment">
             <form action="trip.php" method="post">
                 <table>
@@ -88,7 +92,7 @@ WHILE ($row = $run_role->fetch_array()) {
 
                         if($submit) {
                             if($comment) {
-                                $query = "INSERT INTO comment (username, comment, p_id)
+                                $query = "INSERT INTO comments (username, comment, p_id)
                             VALUES ('{$_SESSION['username']}', '$comment'), '$p_id'";
                                 if (!mysqli_query($db, $query)) {
                                     echo "<script>alert('Please enter a comment');</script>";

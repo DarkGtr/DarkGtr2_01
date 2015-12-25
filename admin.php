@@ -96,7 +96,7 @@
                                 <option value="Reader">Reader</option>
                                 <option value="Author">Author</option>
                                 <option value="Admin">Admin</option>
-                            <input name="submit<?php echo $u_username; ?>" type="submit" value="submit"/>
+                            <input name="<?php echo $u_username; ?>" type="submit" value="submit"/>
                             </select>
                         </form>
                     </td>

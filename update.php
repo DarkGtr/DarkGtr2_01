@@ -5,17 +5,20 @@
     require('config.php');
 
 
+        if ('POST' == $_SERVER['REQUEST_METHOD'] and
+            isset($_POST['user']) and
+            isset($_POST['up'])) {
 
-        $update_id = $_POST['up'];
-        $updateR = $_POST['user'];
+            $user = mysqli_real_escape_string($_POST['user']);
+            $role = mysqli_real_escape_string($_POST['up']);
 
-        $up_query = "UPDATE 'users' SET 'role'='$update_id' WHERE 'username'='$updateR'";
-            $run_query = $db->query($up_query);
+            $up_query = "UPDATE 'users' SET 'role'='$role' WHERE 'username'='$user'";
 
-        if ($run_query) {
-            echo "<script>alert('Updated!'); location.href='admin.php?level=update';</script>";
-        } else {
-            echo "<script>alert('Something went wrong!'); location.href='admin.php?level=update';</script>";
+
+            if (mysqli_query($db, $up_query)) {
+                echo "<script>alert('Updated!'); location.href='admin.php?level=update';</script>";
+            } else {
+                echo "<script>alert('Something went wrong!'); location.href='admin.php?level=update';</script>";
+            }
         }
-
 ?>

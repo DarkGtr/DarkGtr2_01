@@ -37,9 +37,9 @@
         }
     }*/
     $pending = $_GET['pend'];
-    $read = $_GET['read'];
-    $auth = $_GET['auth'];
-    $admin = $_GET['admin'];
+
+
+
 
     if ($pending) {
         $up_query = "UPDATE 'users' SET 'role'='Pending' WHERE 'username'='$pending'";
@@ -49,6 +49,8 @@
         } else  {
             echo "<script>alert('Something went wrong!'); location.href='admin.php?level=update';</script>";
         }}
+
+    $read = $_GET['read'];
          if ($read) {
              $up_query = "UPDATE 'users' SET 'role'='Reader' WHERE 'username'='$read'";
              $run_user = mysqli_query($db, $up_query);
@@ -58,6 +60,7 @@
                  echo "<script>alert('Something went wrong!'); location.href='admin.php?level=update';</script>";
          }}
 
+   $auth = $_GET['auth'];
          if ($auth) {
              $up_query = "UPDATE 'users' SET 'role'='Author' WHERE 'username'='$auth'";
              $run_user = mysqli_query($db, $up_query);
@@ -66,6 +69,8 @@
              } else  {
                  echo "<script>alert('Something went wrong!'); location.href='admin.php?level=update';</script>";
         }}
+
+$admin = $_GET['admin'];
          if($admin) {
              $up_query = "UPDATE 'users' SET 'role'='Admin' WHERE 'username'='$admin'";
              $run_user = mysqli_query($db, $up_query);

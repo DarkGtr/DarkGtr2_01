@@ -87,13 +87,13 @@ WHILE ($row = $run_role->fetch_array()) {
                     $trip_query = "SELECT * FROM post WHERE p_title='$post_title'";
                     $run_query = $db->query($query);
                     while($row = $run_query->fetch_array()) {
-                        $p_id = $row['p_id'];
+                        $p_id = $row['post_id'];
 
 
                         if($submit) {
                             if($comment) {
-                                $query = "INSERT INTO comments (username, comment, p_id)
-                            VALUES ('{$_SESSION['username']}', '$comment'), '$p_id'";
+                                $query = "INSERT INTO comments (post_id, username, comment)
+                            VALUES ('$p_id', '{$_SESSION['username']}'), '$comment'";
                                 if (mysqli_query($db, $query)) {
                                     echo "<script>alert('You have just commented!');</script>";
                                 } elseif ($comment = '') {

@@ -90,7 +90,7 @@
                     <td><?php echo $u_username; ?></td>
                     <td><?php echo $u_role; ?></td>
                     <td>
-                        <form action="update.php" method="post">
+                        <form action="update.php" method="get">
                             <select name="up">
                                 <option value="Pending">Pending</option>
                                 <option value="Reader">Reader</option>
@@ -98,9 +98,9 @@
                                 <option value="Admin">Admin</option>
                             <input name="submit" type="submit" value="<?php echo $u_username; ?>"/>
                             </select>
-                        </form> <?php }} ?>
+                        </form>
                     </td>
-                </tr>
+                </tr> <?php }} ?>
 
             </table>
         </h3>

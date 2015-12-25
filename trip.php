@@ -77,10 +77,34 @@ WHILE ($row = $run_role->fetch_array()) {
     <div ID="Comment">
         <form action="trip.php" method="post">
             <table>
+                <?php
+                    $comment = $_POST['comment'];
+                    $submit = $_POST['submit'];
+                    $post_title = $_GET['trip'];
+                    $trip_query = "SELECT * FROM post WHERE p_title='$post_title'";
+                    $run_query = $db->query($query);
+                    while($row = $run_query->fetch_array()) {
+                        $p_id = $row['p_id'];
+
+
+                    if($submit) {
+                        if($comment) {
+                            $query = "INSERT INTO comment (username, comment, p_id)
+                            VALUES ('{$_SESSION['username']}', '$comment'), '$p_id'";
+                            if (!mysqli_query($db, $query)) {
+                                echo "<script>alert('Please enter a comment');</script>";
+                            }
+
+                            echo "You've just commented";
+                        }
+
+                    }
+                    }}
+                ?>
                 <tr>
                     <td>Name: <?php if($_SESSION['username']){
                     echo $_SESSION['username'];
-                    }?></td>
+                    ?></td>
                 </tr>
                 <tr>
                     <td colspan="2">Comment: </td>
@@ -93,7 +117,7 @@ WHILE ($row = $run_role->fetch_array()) {
                 </tr>
             </table>
         </form>
-    </div> <?php }else {echo "Please login to add comment";} ?>
+    </div> <?php } else {echo "Please login to add comment";} ?>
 </div>
 <div ID="footer">
     <div class="Container">

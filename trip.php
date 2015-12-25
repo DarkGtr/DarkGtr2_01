@@ -69,7 +69,7 @@ WHILE ($row = $run_role->fetch_array()) {
             <h2><?php echo $post_title . "by" . $post_Author . "Date: " . $post_date; ?></h2><hr>
             <h2><?php echo $post_content; ?></h2>
             <h2>Post Country: <?php $_POST['p_country']; ?></h2>
-            <h2>Tags: <?php $_POST['p_tags']; ?></h2></h2>
+            <h2>Tags: <?php $_POST['p_tags']; }?></h2></h2>
 
     </div>
 </div>

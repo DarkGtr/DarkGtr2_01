@@ -22,8 +22,6 @@ require('config.php');
     while($row = $run_query->fetch_array()) {
         $p_id = $row['post_id'];
 
-
-        if(isset($comment)) {
             $query = "INSERT INTO comments (post_id, username, comment)
                                 VALUES ('$p_id', '$username'), '$comment'";
             if (mysqli_query($db, $query)) {

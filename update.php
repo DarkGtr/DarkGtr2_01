@@ -6,10 +6,10 @@
 
     if(isset($_POST['submit'])) {
 
-        $update_id = $_POST['update'];
+        $update_id = $_GET['up'];
         $updateR = $_POST['submit'];
 
-        $up_query = "UPDATE users SET role='$update_id' WHERE 'username'='$updateR'";
+        $up_query = "UPDATE users SET role='$updateR' WHERE username='$update_id'";
         $run_query2 = $db->query($up_query);
         echo $update_id . $updateR;
 

@@ -73,6 +73,27 @@ WHILE ($row = $run_role->fetch_array()) {
             <h2>Country: <?php echo $post_country; ?></h2>
             <h2>Tags: <?php echo $post_hashtags; }}?></h2></h2>
     </div>
+    <?php if ($_SESSION['username'] == true) { ?>
+    <div ID="Comment">
+        <form action="trip.php" method="post">
+            <table>
+                <tr>
+                    <td>Name: <?php if($_SESSION['username']){
+                    echo $_SESSION['username'];
+                    }?></td>
+                </tr>
+                <tr>
+                    <td colspan="2">Comment: </td>
+                </tr>
+                <tr>
+                    <td colspan="2"><textarea name="comment"></textarea></td>
+                </tr>
+                <tr>
+                    <td colspan="2"><input type="submit" name="submit" value="comment"/></td>
+                </tr>
+            </table>
+        </form>
+    </div> <?php }else {echo "Please login to add comment";} ?>
 </div>
 <div ID="footer">
     <div class="Container">

@@ -89,13 +89,12 @@
                             $u_username = $row['username'];
                             $u_role = $row['role'];
                     ?>
-                    <td>
-                    </td>
+                    <td><?php echo $u_username; ?></td>
                     <td><?php echo $u_role; ?></td>
                     <td>
-                        <form action="update.php" method="post">
-                            <label for="user"><?php echo $u_username; ?></label>
-                            <input name="user" id="user" type="radio" value="<?php echo $u_username; ?>">
+                        <!--<form action="update.php" method="post">
+                            <label for="user"><//?php echo $u_username; ?></label>
+                            <input name="user" id="user" type="radio" value="*/?php echo $u_username; ?>">
                                 <label for="up"></label>
                                     <select name="up" id="up">
                                 <option value="Pending">Pending</option>
@@ -104,7 +103,11 @@
                                 <option value="Admin">Admin</option>
                                     </select>
                             <input name="submit" type="submit" value="submit"/>
-                        </form>
+                        </form>-->
+                        <a href="update.php?pen=<?php echo $u_username;?>">Pending </a>
+                        <a href="update.php?read=<?php echo $u_username;?>">Reader </a>
+                        <a href="update.php?auth=<?php echo $u_username;?>">Author </a>
+                        <a href="update.php?admin=<?php echo $u_username;?>">Delete </a>
                     </td>
                 </tr> <?php }} ?>
             </table>

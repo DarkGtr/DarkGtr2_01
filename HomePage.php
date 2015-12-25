@@ -6,6 +6,7 @@
     //if (!isset($_POST['Login'])) {
      //   echo "<script>alert('Please Login'); location.href='Login.php';</script>";
   //  }
+require('config.php');
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -37,7 +38,7 @@
         ini_set('display_errors', 1);
         ini_set('display_startup_errors', 1);
         error_reporting(E_ALL);
-         require('config.php');
+
 
              echo 'Welcome ' . $_SESSION['username'] . "!" . "<br>";
              $role = "SELECT * FROM users WHERE username ='{$_SESSION['username']}'";

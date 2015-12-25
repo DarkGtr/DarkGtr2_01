@@ -24,8 +24,6 @@ WHILE ($row = $run_role->fetch_array()) {
         die ("error");
     }
 }
-
-
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -81,29 +79,9 @@ WHILE ($row = $run_role->fetch_array()) {
 
         </div>
         <div ID="Comment">
-            <form action="trip.php" method="post">
+            <form action="comment.php?trip=<?php echo $post_title ?>" method="post">
                 <table>
-                    <?php
-                    $comment = $_POST['comment'];
-                    $submit = $_POST['submit'];
-                    echo $comment;
-                    $trip_query = "SELECT * FROM post WHERE p_title='$post_title'";
-                    $run_query = $db->query($query);
-                    while($row = $run_query->fetch_array()) {
-                        $p_id = $row['post_id'];
 
-
-                        if(isset($submit)) {
-                                $query = "INSERT INTO comments (post_id, username, comment)
-                            VALUES ('$p_id', '{$_SESSION['username']}'), '$comment'";
-                                if (mysqli_query($db, $query)) {
-                                    echo "<script>alert('You have just commented!');location.href='trip.php?trip='$post_title'</script>";
-                                } elseif ($comment = '') {
-                                   echo "<script>alert('Enter a comment');</script>";
-                            }
-
-                    }}
-                    ?>
                     <tr>
                         <td>Name: <?php echo $_SESSION['username'];?></td>
                     </tr>

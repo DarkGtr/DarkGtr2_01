@@ -44,7 +44,7 @@
     <div class="Container page">
         <h1> <?php echo "Admin: " . $_SESSION['username']; ?> </h1>
         <h2>
-            <a href="admin.php?level=change">Users_level</a> |
+            <a href="admin.php?level=update">Users_level</a> |
             <a href="admin.php?user=delete">Users_delete</a>
         </h2>
         <h3>
@@ -91,7 +91,7 @@
                     <td><?php echo $u_role; ?></td>
                     <td>
                         <form action="update.php" method="get">
-                            <select name="up?<?php echo $u_username; ?>">
+                            <select name="up">
                                 <option value="Pending">Pending</option>
                                 <option value="Reader">Reader</option>
                                 <option value="Author">Author</option>

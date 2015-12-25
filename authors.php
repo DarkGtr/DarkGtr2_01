@@ -50,7 +50,7 @@
 <div ID="MainArea">
     <div class="Container page">
         <a href="authors.php?"
-           <h1> Authors: <br>
+           <h1> Authors: <br><hr>
         <?php
         ini_set('display_errors', 1);
         ini_set('display_startup_errors', 1);

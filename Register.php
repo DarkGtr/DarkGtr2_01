@@ -26,6 +26,7 @@
     <meta charset="UTF-8">
     <title>Register</title>
     <link rel="stylesheet" type="text/css" href="DarkGtr2.css">
+    <link rel="icon" type="image/png" href="http://genfavicon.com/inc/to_ico.php" sizes="32x32" />
 </head>
 <body>
 <div ID = "MainHeader">

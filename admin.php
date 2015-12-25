@@ -44,7 +44,7 @@
     <div class="Container page">
         <h1> <?php echo "Admin: " . $_SESSION['username']; ?> </h1>
         <h2>
-            <a href="admin.php?user=level">Users_level</a> |
+            <a href="admin.php?level=change">Users_level</a> |
             <a href="admin.php?user=delete">Users_delete</a>
         </h2>
         <h3>
@@ -70,6 +70,9 @@
             </table>
         </h3>
         <h3>
+            <?php
+                if(isset($_GET['level']) && !empty($_GET['level'])){
+            ?>
             <table>
                 <tr>
                     <th>Username</th>
@@ -97,7 +100,7 @@
                             </select>
                         </form>
                     </td>
-                </tr> <?php } ?>
+                </tr> <?php }} ?>
 
             </table>
         </h3>

@@ -78,7 +78,7 @@ WHILE ($row = $run_role->fetch_array()) {
 
         </div>
         <div ID="Comment">
-            <form action="trip.php?trip=<?php echo $post_title;?>" method="post">
+            <form action="trip.php" method="post">
                 <table>
                     <?php
                     $comment = $_POST['comment'];

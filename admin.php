@@ -122,12 +122,9 @@
 </body>
 <?php
 require('config.php');
-if ('submit' == $_SERVER['REQUEST_METHOD'] and
-    isset($_POST['user']) and
-    isset($_POST['up'])) {
-
-    $user = mysqli_real_escape_string($db, $_POST['user']);
-    $role = mysqli_real_escape_string($db, $_POST['up']);
+if (isset($_POST['submit'])) {
+    $user= $_POST['user'];
+    $role= $_POST['up'];
 
     $up_query = "UPDATE 'users' SET 'role'='$role' WHERE 'username'='$user'";
 

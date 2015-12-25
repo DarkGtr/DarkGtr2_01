@@ -51,8 +51,16 @@ WHILE ($row = $run_role->fetch_array()) {
     <div class="Container page">
         <?php
             $author = $_GET['author'];
-            echo $author;
+            $query = "SELECT * FROM post WHERE username='$author'";
+            $run_query = $db->query($query);
+            while($row = $run_query->fetch_array()){
+            $u_username = $row['username'];
+            $post_title = $row['p_title'];
+
         ?>
+        <h1>Author name: <?php echo $author; ?></h1>
+        <h2>Authors posts:</h2>
+        <h3><a href="trip.php?trip=<?php echo $post_title ?>"><?php echo $post_title . '<br>'?></h3>
     </div>
 </div>
 <div ID="footer">

@@ -90,7 +90,7 @@ WHILE ($row = $run_role->fetch_array()) {
                         $p_id = $row['post_id'];
 
 
-                        if($submit) {
+                        if(isset($submit)) {
                                 $query = "INSERT INTO comments (post_id, username, comment)
                             VALUES ('$p_id', '{$_SESSION['username']}'), '$comment'";
                                 if (mysqli_query($db, $query)) {

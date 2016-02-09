@@ -25,7 +25,7 @@ if(isset($_POST['submit'])) {
         $p_id = $row['post_id'];
 
             $query = "INSERT INTO comments (post_id, username, comment)
-                                VALUES ('$p_id', '$username'), '$comment'";
+                                VALUES ('$p_id', '$username', '$comment')";
             if (mysqli_query($db, $query)) {
                 echo "<script>alert('You have just commented!');location.href='trip.php?trip=$post_title</script>";
             } elseif ($comment = '') {

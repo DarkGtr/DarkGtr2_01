@@ -22,7 +22,7 @@ if(isset($_POST['submit'])) {
     $trip_query = "SELECT * FROM post WHERE p_title='$post_title'";
     $run_query = $db->query($trip_query);
     while($row = $run_query->fetch_array()) {
-        $p_id = $row['p_id'];
+        $p_id = $row['post_id'];
 
             $query = "INSERT INTO comments (post_id, username, comment)
                                 VALUES ('$p_id', '$username', '$comment')";
